@@ -1,5 +1,7 @@
 {
-	"name" : "TAcceptsVisitor",
 	"commentStamp" : "",
-	"category" : "Geranium-Scenarios"
+	"classinstvars" : [ ],
+	"category" : "Geranium-Scenarios",
+	"instvars" : [ ],
+	"name" : "TAcceptsVisitor"
 }

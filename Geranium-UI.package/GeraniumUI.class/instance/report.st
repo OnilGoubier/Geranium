@@ -1,9 +1,10 @@
 accessing
 report
 
+	
 	self reportMutex critical: [
-
-	^ report ifNil: [ 
+	
+	^report ifNil: [ 
 			self perform: self scenario.
 			"min/max for non-hoping categories"
 			report := GeraniumSimulation new
@@ -13,4 +14,6 @@ report
 			report
 		].
 	
-	]
+	]. 
+
+ 	 

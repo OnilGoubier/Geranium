@@ -1,5 +1,7 @@
 {
-	"name" : "TInstanceProperties",
 	"commentStamp" : "",
-	"category" : "Geranium-Scenarios"
+	"classinstvars" : [ ],
+	"category" : "Geranium-Scenarios",
+	"instvars" : [ ],
+	"name" : "TInstanceProperties"
 }

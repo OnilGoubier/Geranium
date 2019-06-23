@@ -1,5 +1,7 @@
 {
-	"name" : "TDistributionPlot",
 	"commentStamp" : "",
-	"category" : "Geranium-Distributions"
+	"classinstvars" : [ ],
+	"category" : "Geranium-Distributions",
+	"instvars" : [ ],
+	"name" : "TDistributionPlot"
 }

@@ -1,5 +1,7 @@
 {
-	"name" : "TProfileHierarchyVisitor",
 	"commentStamp" : "",
-	"category" : "Geranium-Scenarios"
+	"classinstvars" : [ ],
+	"category" : "Geranium-Scenarios",
+	"instvars" : [ ],
+	"name" : "TProfileHierarchyVisitor"
 }

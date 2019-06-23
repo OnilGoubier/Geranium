@@ -31,7 +31,6 @@ visitStatisticalScenario: aStatisticalScenario
 				totalResidences := totalResidences + building numberOfResidences.
 				totalPopulation := totalPopulation + building occupantSize.
 			]. 
-	
 	"]."
 	
 	areaOfInterest buildings: buildings.

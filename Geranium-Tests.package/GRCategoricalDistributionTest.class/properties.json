@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Geranium-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"aGRCategoricalDistribution",
+		"frequencies"
+	],
+	"name" : "GRCategoricalDistributionTest",
+	"type" : "normal"
+}

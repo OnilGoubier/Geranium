@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "johanfabry 7/24/2015 08:27",
-	"super" : "AbstractWidgetModel",
+	"commentStamp" : "",
+	"super" : "AbstractWidgetPresenter",
 	"category" : "Geranium-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],

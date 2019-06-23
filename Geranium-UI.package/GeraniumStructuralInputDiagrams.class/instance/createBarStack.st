@@ -3,11 +3,13 @@ createBarStack
 
 	| residencesTypes processed |
 
-	residencesTypes := (report inputVisitor residences collect: [ :r | (report scenarioEntityOf: r) name ]).
+	"residencesTypes := (report inputVisitor residences collect: [ :r | (report scenarioEntityOf: r) name ])."
+	
 	barStack := RoassalModel new.
 	barStack script: [ :v :c |
 		| b |
 		processed ifNil: [processed := true. self processCanvas: c and: v].
+		residencesTypes := (report inputVisitor residences collect: [ :r | (report scenarioEntityOf: r) name ]).
 		b:=residencesTypes identityHistogram: Color orange withCaption: nil inView: v.
 		b addDecorator: RTMeanDevVarDecorator new moveInFront.
 		b axisY

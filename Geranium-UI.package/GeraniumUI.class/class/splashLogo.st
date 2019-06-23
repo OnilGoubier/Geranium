@@ -3,7 +3,9 @@ splashLogo
 	| logoMorph logoPath |
 	logoPath := SmalltalkImage current lastImagePath asFileReference
 		parent / 'splash-app-geranium-blue.png'.
-	logoMorph := (ImageReadWriter formFromStream: logoPath readStream)
+	"logoMorph := (ImageReadWriter formFromStream: logoPath readStream)
+		asMorph."
+	logoMorph := (ImageReadWriter formFromStream: logoPath asFileReference binaryReadStream)
 		asMorph.
 	logoMorph openCenteredInWorld.
 	"[ (Delay forSeconds: 10) wait.

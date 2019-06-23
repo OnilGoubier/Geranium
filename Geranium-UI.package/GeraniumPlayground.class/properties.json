@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "ComposablePresenter",
-	"category" : "Geranium-UI-IO-Diagrams",
+	"super" : "GTPlayground",
+	"category" : "Geranium-UI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"report"
+		"geraniumUI"
 	],
-	"name" : "GeraniumReportDiagrams",
+	"name" : "GeraniumPlayground",
 	"type" : "normal"
 }

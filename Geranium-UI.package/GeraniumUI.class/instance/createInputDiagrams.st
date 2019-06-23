@@ -3,6 +3,7 @@ createInputDiagrams
 	structuralInputDiagrams := GeraniumStructuralInputDiagrams new: self report. 
 	socialInputDiagrams := GeraniumSocialInputDiagrams new: self report.
 	microClimateInputDiagrams := GeraniumMicroClimateInputDiagrams new: self report.
+	
 	"passing initializers ?"
 	"inputDiagrams := RoassalModel new.
 	inputDiagrams
