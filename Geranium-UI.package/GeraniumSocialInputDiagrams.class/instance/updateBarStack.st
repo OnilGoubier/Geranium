@@ -1,0 +1,4 @@
+updating
+updateBarStack 
+
+	barStack smoothRefresh.

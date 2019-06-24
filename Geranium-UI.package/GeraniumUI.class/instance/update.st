@@ -1,5 +1,6 @@
 updating
 update 
 
-	"self updateReport."
-	self updateStructuralInputDiagram.
+	self updateReport.
+	self updateStructuralInputDiagrams.
+	self updateSocialInputDiagrams.

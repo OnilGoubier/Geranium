@@ -2,14 +2,17 @@ initialization
 createPie
 	|residences categories processed |
 	
-	residences := report inputVisitor residences.
+	"residences := report inputVisitor residences.
 	categories := residences collect: [ :r | r category ].
-	categories :=  categories frequencies associations.
+	categories :=  categories frequencies associations."
 	
 	pie := RoassalModel new.
 	pie
 		script: [ :v :c | |b| 
 			processed ifNil: [processed := true. self processCanvas: c and: v].
+			residences := report inputVisitor residences.
+			categories := residences collect: [ :r | r category ].
+			categories :=  categories frequencies associations.
 			b := categories ringPieWithCaption: nil inView: v.
 			b build.
 			v canvas camera "focusOnCenterScaled."focusOnCenterScaled: v canvas extent * self cameraScale.

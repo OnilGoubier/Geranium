@@ -1,12 +1,13 @@
 initialization
 createPie
 	| stats |
-	stats := (report inputVisitor residences collect: [ :r |  r occupants class ]) frequencies associations.
+	"stats := (report inputVisitor residences collect: [ :r |  r occupants class ]) frequencies associations."
 	
 	pie := RoassalModel new.
 	pie
 		script: [ :v :c | | b |
 			self processCanvas: c and: v. 
+			stats := (report inputVisitor residences collect: [ :r |  r occupants class ]) frequencies associations.
 			b := stats pieWithCaption: nil inView: v.
 			"color setting does not seem to work"
 			b normalizer normalizeColorUsing:  (RTColorPalette qualitative colors: 3 scheme:'Set2') reverse.

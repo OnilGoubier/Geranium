@@ -1,5 +1,5 @@
 updating
-updateStructuralInputDiagram
+updateStructuralInputDiagrams
 
 	"report := self updateReport."
 	"self halt."
