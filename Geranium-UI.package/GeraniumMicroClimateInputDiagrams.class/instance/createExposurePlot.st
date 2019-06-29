@@ -3,14 +3,19 @@ createExposurePlot
 
 	| b ds exposures processed |
 	
-	exposures := (report inputVisitor residences collect: [ :r |  r exposure ]) frequencies. 
-	0 to: 6 do: [ :i | (exposures keys includes: i) ifFalse: [ exposures at: i put: 0 ] ].
+	"exposures := (report inputVisitor residences collect: [ :r |  r exposure ]) frequencies. 
+	0 to: 6 do: [ :i | (exposures keys includes: i) ifFalse: [ exposures at: i put: 0 ] ]."
 
 	"exposures := (exposures associations sort: [:x :y | x key < y key]) collect: [:a | a value]."
-	exposures := exposures associations.
+	"exposures := exposures associations."
 	exposurePlot := RoassalModel new.
 	exposurePlot script: [ :v :c | 
 		processed ifNil: [processed := true. self processCanvas: c and: v].
+		exposures := (report inputVisitor residences collect: [ :r |  r exposure ]) frequencies. 
+		0 to: 6 do: [ :i | (exposures keys includes: i) ifFalse: [ exposures at: i put: 0 ] ].
+
+		"exposures := (exposures associations sort: [:x :y | x key < y key]) collect: [:a | a value]."
+		exposures := exposures associations.
 		b := RTGrapher new view: v.
 		ds := RTData new.
 			ds points: exposures;

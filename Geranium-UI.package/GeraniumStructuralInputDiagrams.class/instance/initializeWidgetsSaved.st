@@ -1,5 +1,5 @@
 initialization
-initializeWidgets
+initializeWidgetsSaved
 
 	self createAvSurfaceOccupantSizeDottedPlot.
 	self createPie.

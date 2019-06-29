@@ -1,7 +1,7 @@
 updating
-update
+updateSaved
 	"update all after some changes in the report"
 	
-	self updateAvSurfaceOccupantSizeDottedPlot.
+	self updateScatterPlot.
 	self updateBarStack.
 	self updatePie.

@@ -14,7 +14,7 @@ createBarStack
 		b addDecorator: RTMeanDevVarDecorator new moveInFront.
 		b axisY
 			noDecimal;
-			title: 'Instances'.
+			title: "'Instances'" 'Nb. of Residences'.
 		b build.
 		b view.
 		v canvas camera "focusOnCenterScaled."focusOnCenterScaled: v canvas extent * self cameraScale.

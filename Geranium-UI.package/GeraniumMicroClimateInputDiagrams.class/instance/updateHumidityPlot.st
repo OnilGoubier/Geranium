@@ -1,0 +1,4 @@
+updating
+updateHumidityPlot
+
+	humidityPlot smoothRefresh.

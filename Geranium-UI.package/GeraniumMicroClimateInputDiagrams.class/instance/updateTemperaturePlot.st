@@ -1,0 +1,4 @@
+updating
+updateTemperaturePlot
+
+	temperaturePlot smoothRefresh.

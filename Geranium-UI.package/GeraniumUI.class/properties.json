@@ -43,7 +43,8 @@
 		"kiviat",
 		"minMaxConsumptionLabels",
 		"areaLegend",
-		"stepMutex"
+		"stepMutex",
+		"typesColors"
 	],
 	"name" : "GeraniumUI",
 	"type" : "normal"

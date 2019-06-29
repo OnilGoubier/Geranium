@@ -1,0 +1,3 @@
+acccessing
+x
+	^x

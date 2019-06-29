@@ -1,5 +1,5 @@
 specs
-defaultSpec
+defaultSpecSaved
 	<spec: #default>
 	^ SpecLayout composed
 		newRow: [ :row | 

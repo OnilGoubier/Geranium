@@ -1,9 +1,8 @@
 *Geranium-Distributions
-dottedPlot: aColor withCaption: aString inView: aView
+dottedPointPlot: aColor withCaption: aString inView: aView
 	
-	"[|x| x:= PMGaussianGenerator new. 
-	((1 to: 100) collect: [:i | x next]) 
-		dottedPlot: Color red withCaption: 'hallo'] value"
+	"#(1@2 2@3 4@5) 
+		dottedPointPlot: Color red withCaption: 'hallo'"
 	
 	| b ds |
 	b := RTGrapher new.
@@ -12,10 +11,12 @@ dottedPlot: aColor withCaption: aString inView: aView
 	"b extent: self vizSize."
 	
 	ds := RTData new.
+	ds dotShape rectangle color: aColor.
 	"When the mouse is above a bar, say which class we are point at"
 	ds interaction popup.
 	ds points: self.
-	ds dotShape rectangle color: aColor.
+	ds x: #x.
+	ds y: #y.
 	b add: ds.	
 	self addLabel: aString onGraph: b.
 	^ b 

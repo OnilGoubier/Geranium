@@ -8,7 +8,9 @@
 	"instvars" : [
 		"scatterplot",
 		"pie",
-		"barStack"
+		"barStack",
+		"avSurfaceOcSizePlot",
+		"multipleBarStack"
 	],
 	"name" : "GeraniumStructuralInputDiagrams",
 	"type" : "normal"
