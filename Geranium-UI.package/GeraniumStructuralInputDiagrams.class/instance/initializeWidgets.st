@@ -1,6 +1,6 @@
 initialization
 initializeWidgets
 
-	self createScatterPlot.
+	self createAvSurfaceOccupantSizeDottedPlot.
 	self createPie.
 	self createBarStack.

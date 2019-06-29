@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RTAbstractMultipleData",
+	"category" : "Geranium-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dotBuilder"
+	],
+	"name" : "GeraniumMultipleData",
+	"type" : "normal"
+}

@@ -2,7 +2,19 @@ initialization
 createBoxPlot
 	
 	| incomes buildingProfiles residenceProfiles processed |
-	buildingProfiles := report inputVisitor resolvedResidenceProfiles.
+	"buildingProfiles := report inputVisitor resolvedResidenceProfiles.
+	residenceProfiles := (buildingProfiles collect: [ :p | 
+		p class = UrbanProfileForAppartmentBlock 
+			ifTrue: [ p resolvedAppartmentProfiles ] 
+			ifFalse: [ p ]
+		]) deepFlatten asSet.
+	incomes := (residenceProfiles collect: [ :rp | rp name -> (rp income next: 100) ])
+		asOrderedCollection."
+	
+	boxplot := RoassalModel new.
+	boxplot script: [ :v :c | | b |
+		processed ifNil: [processed := true. self processCanvas: c and: v].
+		buildingProfiles := report inputVisitor resolvedResidenceProfiles.
 	residenceProfiles := (buildingProfiles collect: [ :p | 
 		p class = UrbanProfileForAppartmentBlock 
 			ifTrue: [ p resolvedAppartmentProfiles ] 
@@ -10,10 +22,6 @@ createBoxPlot
 		]) deepFlatten asSet.
 	incomes := (residenceProfiles collect: [ :rp | rp name -> (rp income next: 100) ])
 		asOrderedCollection.
-	
-	boxplot := RoassalModel new.
-	boxplot script: [ :v :c | | b |
-		processed ifNil: [processed := true. self processCanvas: c and: v].
 		b := incomes boxedPlot: (Color lightBrown) withCaption: nil inView: v.
 		b axisY
 			noDecimal;

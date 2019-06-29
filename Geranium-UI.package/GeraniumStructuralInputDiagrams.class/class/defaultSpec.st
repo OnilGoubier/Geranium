@@ -4,7 +4,7 @@ defaultSpec
 	^ SpecLayout composed
 		newRow: [ :row | 
 						row 
-							add: #scatterplot left: 0.0 right: 0.66;
+							add: #avSurfaceOcSizePlot left: 0.0 right: 0.66; "remove #scatterplot replace with #avSurfaceOcSizePlot"
 							addSplitter; 
 							add: #barStack left:0.33 right: 0.33;
 							addSplitter;

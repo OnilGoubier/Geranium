@@ -1,0 +1,4 @@
+updating
+updateExposurePlot
+
+	exposurePlot smoothRefresh.
