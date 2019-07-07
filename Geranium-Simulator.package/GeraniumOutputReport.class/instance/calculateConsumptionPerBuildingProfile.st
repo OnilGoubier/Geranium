@@ -19,3 +19,6 @@ calculateConsumptionPerBuildingProfile
 					add: (historiesOfP collect: [ :h | h at: i ]) sum ] ].
 	self assert: buildingProfiles size = consumptionHistoryOfBuildingProfiles keys size.		
 	
+	
+	
+	 

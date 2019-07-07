@@ -21,5 +21,5 @@ mapWithBuildingsCenteredAroundBoundingBox: aBoundingBox
 	view @ RTDraggableView @ RTZoomableView.
 	view @ RTDoubleScrollBar.
 	RTEmptyViewContext setOnView: view.
-	view canvas camera focusOnCenterScaled: view canvas extent * 1.5.
+	view canvas camera focusOnCenterScaled: view canvas extent * 1.1.
 	^ view

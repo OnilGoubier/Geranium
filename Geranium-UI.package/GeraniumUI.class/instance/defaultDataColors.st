@@ -1,11 +1,15 @@
 initialization
 defaultDataColors
 
-				typesColors at: #HLMRenovated put: Color yellow.
-			  	typesColors at: #HLMNew put: Color green.
-				typesColors at: #HLMHousing put: Color blue.
-				typesColors at: #SocialHousing put: Color orange.
-				typesColors at: #PrivateHousing put: Color purple.
+		self typesColors 
+			add: #HLMRenovated -> Color yellow;
+			add: #HLMRenovatedBlock->Color yellow;
+			add: #HLMNew -> Color green;
+			add: #HLMNewBlock->Color green;
+			add: #HLMHousing -> Color blue;
+			add: #SocialHousing -> Color orange;
+			add: #PrivateHousing -> Color purple;
+			add: #Total->Color red. 
 				
 
 	

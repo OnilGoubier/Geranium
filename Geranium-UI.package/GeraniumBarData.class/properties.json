@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTData",
+	"category" : "Geranium-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GeraniumBarData",
+	"type" : "normal"
+}

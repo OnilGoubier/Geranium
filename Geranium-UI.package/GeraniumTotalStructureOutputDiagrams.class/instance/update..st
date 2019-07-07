@@ -2,5 +2,6 @@ initialization
 update: aStep
 
 	step := aStep.
-	totalsPlot smoothRefresh.
+	"totalsPlot smoothRefresh."
+	individualConsumption smoothRefresh.
 	buildingTypePlot smoothRefresh

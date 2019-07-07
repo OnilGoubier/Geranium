@@ -8,6 +8,7 @@
 	"instvars" : [
 		"totalsPlot",
 		"buildingTypePlot",
+		"individualConsumption",
 		"step",
 		"consumptionHistory",
 		"consumptionHistoryCumSum",

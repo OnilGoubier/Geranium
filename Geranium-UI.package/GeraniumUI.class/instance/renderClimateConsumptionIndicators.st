@@ -6,7 +6,7 @@ renderClimateConsumptionIndicators
 				removeElement: consumptionLabel;
 				removeElement: temperatureLabel;
 				removeElement: humidityLabel ].
-	consumption := (self consumptionHistoryCumSumAt: step + 1) first
+	consumption := (self consumptionHistoryCumSumAt: step + 1) first/1000
 		printShowingDecimalPlaces: 1.	"The total"
 	temperature := (self temperatureAt: step + 1)
 		printShowingDecimalPlaces: 1.
@@ -17,7 +17,7 @@ renderClimateConsumptionIndicators
 		translateTo: (self relativeToBoundingBox: 17 @ 13).
 	humidityLabel := ((RTLabel new
 		color: Color blue;
-		height: 4) elementOn: humidity asString , '°H')
+		height: 4) elementOn: humidity asString , '% Hr')
 		translateTo: (self relativeToBoundingBox: 19 @ 21).
 	self renderMinMaxConsumption.
 	self renderArealLegend.
@@ -25,7 +25,7 @@ renderClimateConsumptionIndicators
 	"edge := (RTLine new color: Color orange; width: 1) edgeFrom: a to: b"	"width: 2; color: Color orange."
 	consumptionLabel := ((RTLabel new
 		color: Color black;
-		height: 3) elementOn: consumption asString , 'kWh')
+		height: 3) elementOn: consumption asString , 'MWh')
 		translateTo: (self relativeToBoundingBox: 17 @ 38).
 	mapView view
 		add: temperatureLabel;

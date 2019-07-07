@@ -10,7 +10,8 @@ dottedPointPlotWithLabelAndColorsInView: aView
 	b extent: self vizSize.
 	ps := (self collect: [ :e | e second]).
 	ds := GeraniumData new.
-	ds dotShape rectangle "color: aColor".
+	ds dotShape rectangle; size: 15. "color: aColor".
+
 	"When the mouse is above a bar, say which class we are point at"
 	"ds interaction popup."
 	ds points: ps.

@@ -17,7 +17,7 @@ defaultSpec
 						addSplitter;
 						add: #tabmgrInput top: 0.6 bottom: 0 
 			] left: 0 right: 0.30;
-			addSplitter;
+			"addSplitter;"
 			add: #tabmgrOutput left: 0.70 right: 0.
 		]; 						
 		yourself

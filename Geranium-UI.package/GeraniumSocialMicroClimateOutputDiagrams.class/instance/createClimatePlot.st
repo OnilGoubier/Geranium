@@ -56,6 +56,6 @@ createClimatePlot
 		
 		
 		v canvas camera "focusOnCenterScaled."focusOnCenterScaled: v canvas extent * self cameraScale.
-		v @ (RTGridView new gridSize: 10).
+		"v @ (RTGridView new gridSize: 10)."
 		v
 	]

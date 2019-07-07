@@ -5,3 +5,5 @@ update
 	self updateStructuralInputDiagrams.
 	self updateSocialInputDiagrams.
 	self updateMicroClimateInputDiagrams.
+	self updateTotalStructureOutputDiagrams.
+	self updateSocialMicroClimateOutputDiagrams.

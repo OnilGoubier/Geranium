@@ -26,6 +26,7 @@ asHistogram: aColor withCaption: aString inView: aView describing: anotherCollec
 						ifTrue: [ (x key printShowingDecimalPlaces: 2) , ' - '
 								, (x value printShowingDecimalPlaces: 2) ]
 						ifFalse: [ x asString ] ] ].
+	b maxY: 1000.
 	b axisY.
 	b axisX
 		noTick;

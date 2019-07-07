@@ -1,7 +1,7 @@
 *Geranium-Distributions
 dottedPointPlotWithLabelWithColors
 	"
-	{{{'hello' . (Color red)} . (1@2)} . {{'bonjour' . (Color blue)}. (3@4)} . {{'coucou' . (Color green)} . (5@6)}} dottedPointPlotWithLabelWithColors: Color red
+	{{{'hello' . (Color red)} . (1@2)} . {{'bonjour' . (Color blue)}. (3@4)} . {{'coucou' . (Color green)} . (5@6)}} dottedPointPlotWithLabelWithColors
 	"
 	| b ds ps|
 	b := RTGrapher new.

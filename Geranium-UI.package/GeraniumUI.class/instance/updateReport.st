@@ -12,6 +12,7 @@ updateReport
 			report := GeraniumSimulation new
 				for: #Geranium;
 				run.
+			Transcript show: (report whatIf at: #temperature ifAbsentPut: [0]); cr.
 			report]].
 	"^ report"
 	

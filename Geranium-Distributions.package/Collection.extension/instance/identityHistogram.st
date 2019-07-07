@@ -1,5 +1,9 @@
 *Geranium-Distributions
 identityHistogram
+"
+#('hello' 'hello' 'bonjour') identityHistogram
+"
+
 
 	| b ds histDict samples|
 b := RTGrapher new.

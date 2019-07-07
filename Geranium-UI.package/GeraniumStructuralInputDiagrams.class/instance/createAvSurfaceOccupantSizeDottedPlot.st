@@ -29,7 +29,7 @@ createAvSurfaceOccupantSizeDottedPlot
 						cl := self typesColors at: t name.
 						typeColor at: 2 put: cl.
 						typeSurfaceSize at: 1 put: typeColor.
-						typeSurfaceSize at: 2 put: (Point x: oSize average y: avSurface average).
+						typeSurfaceSize at: 2 put: (Point x: (oSize average asFloat round: 1) y: (avSurface average asFloat round: 1)).
 						typeSurfaceSizeAll add: typeSurfaceSize.	
 		].
 		"typePoint := Dictionary new.
@@ -39,16 +39,18 @@ createAvSurfaceOccupantSizeDottedPlot
 		
 		g axisX
 			noDecimal;
-			title: 'OccupantSize'.
+			title: 'OccupantSize'.";
+			fromPoint: 0@0."
 		g axisY
 			noDecimal;
 			title: 'Avg. Surface'.
 		"g addDecorator: (RTCursorFollower new color: Color blue)." "FOLLOWING WITH THE MOUSE..."
+		g minX: 0.
 		g build.
 		g view.
 		v canvas camera "focusOnCenterScaled."focusOnCenterScaled: v canvas extent * self cameraScale.
 		v @ RTDraggableView.
-		v @ (RTGridView new gridSize: 10).
+		"v @ (RTGridView new gridSize: 10)."
 		v @ RTZoomableView.
 		v @ RTDoubleScrollBar.
 

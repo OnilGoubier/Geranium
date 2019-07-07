@@ -1,6 +1,8 @@
 *Geranium-Distributions
 frequencyHistogram
-
+"
+#('hello' 'hello' 'bonjour') frequencyHistogram 
+"
 	| b ds histDict samples|
 b := RTGrapher new.
 b extent: self vizSize.

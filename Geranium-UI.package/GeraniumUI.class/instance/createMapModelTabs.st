@@ -2,24 +2,27 @@ initialization
 createMapModelTabs
 	| tab |
 	tabmgrMap := self newTabManager.
+	
 	tab := self newTab.
-	tab presenter: mapDiagram.
+	tab model: mapDiagram.
 	tab
 		label: 'Map';
 		closeable: false;
-		icon: (self appIcon: #map size: 28 @ 28).
+		icon: (self appIcon: #'map' size: 30@30).
 	tabmgrMap addTab: tab.
+	
 	tab := self newTab.
-	tab presenter: modelEditor.
+	tab model: modelEditor.
 	tab
 		label: 'Model';
 		closeable: false;
-		icon: (self appIcon: #model size: 28 @ 28).
+		icon:  (self appIcon: #model size: 30@30).
 	tabmgrMap addTab: tab.
+	
 	tab := self newTab.
-	tab presenter: kiviat.
+	tab model: kiviat.
 	tab
 		label: 'Overview';
 		closeable: false;
-		icon: (self appIcon: #overview size: 28 @ 28).
-	tabmgrMap addTab: tab
+		icon:  (self appIcon: #overview size: 30@30).
+	tabmgrMap addTab: tab.

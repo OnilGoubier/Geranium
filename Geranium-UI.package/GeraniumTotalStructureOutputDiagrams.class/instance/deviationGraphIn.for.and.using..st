@@ -54,6 +54,8 @@ deviationGraphIn: view for: averageDataPoints and: deviationDataPoints using: aC
 				(RTAreaDecorator new
 					points: seriesDevPair key;
 					color: (color alpha: 0.3))" ].
+	"b maxX: 400."
+	"b maxY: 1000."
 	b
 		axisX;
 		axisY.

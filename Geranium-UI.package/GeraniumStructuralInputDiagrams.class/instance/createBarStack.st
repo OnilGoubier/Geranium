@@ -10,8 +10,9 @@ createBarStack
 		| b |
 		processed ifNil: [processed := true. self processCanvas: c and: v].
 		residencesTypes := (report inputVisitor residences collect: [ :r | (report scenarioEntityOf: r) name ]).
-		b:=residencesTypes identityHistogram: Color orange withCaption: nil inView: v.
-		b addDecorator: RTMeanDevVarDecorator new moveInFront.
+		b := residencesTypes identityHistogramWithCenteredLabelWithColor: self typesColors  inView: v.
+		"b:=residencesTypes identityHistogram: Color orange withCaption: nil inView: v."
+		"b addDecorator: RTMeanDevVarDecorator new moveInFront."
 		b axisY
 			noDecimal;
 			title: "'Instances'" 'Nb. of Residences'.
@@ -19,7 +20,7 @@ createBarStack
 		b view.
 		v canvas camera "focusOnCenterScaled."focusOnCenterScaled: v canvas extent * self cameraScale.
 		v @ RTDraggableView.
-		v @ (RTGridView new gridSize: 10).
+		"v @ (RTGridView new gridSize: 10)."
 		v @ RTZoomableView.
 		v @ RTDoubleScrollBar.
 	].
