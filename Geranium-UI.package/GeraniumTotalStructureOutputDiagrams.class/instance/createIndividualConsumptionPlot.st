@@ -5,7 +5,7 @@ createIndividualConsumptionPlot
 	| b processed lb |
 	individualConsumption  := RoassalModel new.
 	individualConsumption script: [ :v :c | 
-		| historyUpTillNow individualHistoryUpTillNow deviationDataPoints showMin showMax surfaceDict oSizeDict tempCol| 
+		| historyUpTillNow individualHistoryUpTillNow deviationDataPoints showMin showMax surfaceDict oSizeDict | 
 		processed ifNil: [processed := true. self processCanvas: c and: v].
 		showMin := step < 24
 		ifTrue: [ 1 ]
@@ -14,18 +14,13 @@ createIndividualConsumptionPlot
 		surfaceDict := self surfaceSumPerType.
 		oSizeDict := self occupantSizeSumPerType.
 		historyUpTillNow := (self consumptionHistoryFrom: showMin To: showMax) allButFirst.
-		
 		individualHistoryUpTillNow := OrderedCollection new.
-		tempCol := OrderedCollection new.
-		"self buildingProfileNames with: surfaceDict keys do: [ :name :k | tempCol add:  ]"
-		surfaceDict keys with: historyUpTillNow  do: 
-			[ :key :h | 
-				individualHistoryUpTillNow add: (h/(surfaceDict at: key))/(oSizeDict at: key) * 1000 ].
-			
-			"self halt."
+		
+		self buildingProfileNames with: historyUpTillNow do: 
+			[ :name :h | individualHistoryUpTillNow add: ((h*1000/(surfaceDict at: name asSymbol))/(oSizeDict at: name asSymbol)) "* 1000  " ].
 		
 		deviationDataPoints := historyUpTillNow.	"should compute it here -- not used by the viz yet"
-		"myColors := self addTypesColors."
+		
 		b := self
 			deviationGraphIn: v
 			for: individualHistoryUpTillNow

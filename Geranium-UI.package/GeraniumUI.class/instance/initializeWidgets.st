@@ -15,5 +15,6 @@ initializeWidgets
 	self createInputDiagramTabs.
 	self createOutputDiagramTabs.
 	self setDataColors.
+	self currentAreasTypes.
 	
 

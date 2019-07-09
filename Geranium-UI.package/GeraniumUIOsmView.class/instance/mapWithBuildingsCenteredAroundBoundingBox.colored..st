@@ -6,7 +6,7 @@ mapWithBuildingsCenteredAroundBoundingBox: aBoundingBox colored: catColorDistrib
 	"other info or handle the roads as lines etc"
 	| svgPath1 |
 	view ifNil: [view := RTView new].
-	map := RTOSM new ratio: 100.
+	map := RTOSM new ratio: "100" 90.
 	view add: map element.
 	coordinatesBox := aBoundingBox.
 	mapData := self

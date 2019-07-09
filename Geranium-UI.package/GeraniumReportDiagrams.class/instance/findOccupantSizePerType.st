@@ -18,5 +18,5 @@ findOccupantSizePerType
 						[ :e | 					
 						oSize add: e occupantSize.
 						"avSurface add: e surface."].
-						typeOccupantSize at: t put: oSize].
+						typeOccupantSize at: t name put: oSize].
 		^ typeOccupantSize 

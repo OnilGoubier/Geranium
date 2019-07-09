@@ -44,7 +44,8 @@
 		"minMaxConsumptionLabels",
 		"areaLegend",
 		"stepMutex",
-		"typesColors"
+		"typesColors",
+		"areasTypes"
 	],
 	"name" : "GeraniumUI",
 	"type" : "normal"

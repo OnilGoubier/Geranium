@@ -1,5 +1,5 @@
 visualization
-renderTemperatureHumidityDecoration
+renderTemperatureHumidityDecorationSaved
 
 	| el tempOrHumidity|
 	tempOrHumidity := { 

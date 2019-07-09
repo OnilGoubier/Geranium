@@ -7,9 +7,9 @@ defaultDataColors
 			add: #HLMNew -> Color green;
 			add: #HLMNewBlock->Color green;
 			add: #HLMHousing -> Color blue;
-			add: #SocialHousing -> Color orange;
+			add: #SocialHousing -> Color red;
 			add: #PrivateHousing -> Color purple;
-			add: #Total->Color red. 
+			add: #Total->Color orange. 
 				
 
 	

@@ -1,5 +1,5 @@
 rendering
-renderClimateConsumptionIndicators
+renderClimateConsumptionIndicatorsSaved
 	| consumption temperature humidity |
 	consumptionLabel
 		ifNotNil: [ mapView view
@@ -13,11 +13,11 @@ renderClimateConsumptionIndicators
 	humidity := (self humidityAt: step + 1) printShowingDecimalPlaces: 1.
 	temperatureLabel := ((RTLabel new
 		color: Color red;
-		height: 3) elementOn: temperature asString , '°C')
-		translateTo: (self relativeToBoundingBox: 17 @ 15).
+		height: 5) elementOn: temperature asString , '°C')
+		translateTo: (self relativeToBoundingBox: 17 @ 13).
 	humidityLabel := ((RTLabel new
 		color: Color blue;
-		height: 3) elementOn: humidity asString , '% Hr')
+		height: 4) elementOn: humidity asString , '% Hr')
 		translateTo: (self relativeToBoundingBox: 19 @ 21).
 	self renderMinMaxConsumption.
 	self renderArealLegend.
@@ -25,8 +25,8 @@ renderClimateConsumptionIndicators
 	"edge := (RTLine new color: Color orange; width: 1) edgeFrom: a to: b"	"width: 2; color: Color orange."
 	consumptionLabel := ((RTLabel new
 		color: Color black;
-		height: 2) elementOn: consumption asString , 'MWh')
-		translateTo: (self relativeToBoundingBox: 17 @ 33).
+		height: 3) elementOn: consumption asString , 'MWh')
+		translateTo: (self relativeToBoundingBox: 17 @ 38).
 	mapView view
 		add: temperatureLabel;
 		add: humidityLabel;

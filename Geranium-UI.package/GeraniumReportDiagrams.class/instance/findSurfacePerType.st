@@ -16,5 +16,5 @@ findSurfacePerType
 					do: 
 						[ :e | 					
 						surface add: e surface.].
-						typeSurface at: t put: surface].
+						typeSurface at: t name put: surface].
 		^ typeSurface 
