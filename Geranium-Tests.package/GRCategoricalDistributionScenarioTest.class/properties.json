@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Geranium-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"scenario",
+		"visitor"
+	],
+	"name" : "GRCategoricalDistributionScenarioTest",
+	"type" : "normal"
+}

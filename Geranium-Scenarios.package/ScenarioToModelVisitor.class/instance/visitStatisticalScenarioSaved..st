@@ -1,5 +1,5 @@
 visiting
-visitStatisticalScenario: aStatisticalScenario
+visitStatisticalScenarioSaved: aStatisticalScenario
 
 	|totalResidences totalPopulation|
 
@@ -25,15 +25,11 @@ visitStatisticalScenario: aStatisticalScenario
 		[self check: numberOfDeclaredResidences versus: totalResidences] 
 			"and: [ self check: numberOfDeclaredPopulation versus: totalPopulation ])"
 			whileTrue: [ |building|
-				building := (self visitNode: 
-									(resolvedResidenceProfiles at: (residenceDistribution next))).
-				(((building numberOfResidences > 1) and: ((totalResidences + building numberOfResidences) < numberOfDeclaredResidences)) or: (building numberOfResidences = 1))
-					ifTrue: [ 
-						buildings "double dispatch and traversal logic in the visitor makes sense here"
-						add: building.
-						building area: areaOfInterest .
-						totalResidences := totalResidences + building numberOfResidences.
-						totalPopulation := totalPopulation + building occupantSize.]
+				buildings "double dispatch and traversal logic in the visitor makes sense here"
+					add: (building := (self visitNode: (resolvedResidenceProfiles at: (residenceDistribution next)))).
+				building area: areaOfInterest .
+				totalResidences := totalResidences + building numberOfResidences.
+				totalPopulation := totalPopulation + building occupantSize.
 			]. 
 	"]."
 	
