@@ -6,7 +6,7 @@ mapWithBuildingsCenteredAroundBoundingBox: aBoundingBox colored: catColorDistrib
 	"other info or handle the roads as lines etc"
 	| svgPath1 |
 	view ifNil: [view := RTView new].
-	map := RTOSM new ratio: "100" 90.
+	map := RTOSM new ratio: 100 "10".
 	view add: map element.
 	coordinatesBox := aBoundingBox.
 	mapData := self
@@ -16,7 +16,7 @@ mapWithBuildingsCenteredAroundBoundingBox: aBoundingBox colored: catColorDistrib
 		renderTriple: { 'way' . 'building' . 'yes' } 
 		of: mapData for: view asPolygonIn: map 
 		withColor: [:item | catColorDistribution next"Color blue"] 
-		borderColor: [:item | Color black] andWidth: 5.
+		borderColor: [:item | Color black] andWidth: 3.
 	"self renderKiviatIn: view."
 	view canvas addMenuAsSVG: self zoomInSVG scale: 0.1 callback: [ RTZoomInMove on: view ].
 	"view canvas addMenu: ' + Zoom In ' callback: [ RTZoomInMove on: view ]."
@@ -26,5 +26,5 @@ mapWithBuildingsCenteredAroundBoundingBox: aBoundingBox colored: catColorDistrib
 	view @ RTDoubleScrollBar.
 	RTEmptyViewContext setOnView: view.
 	view canvas camera focusOnCenterScaled: view canvas extent * 1.1.
-
+	view canvas camera scale: 5.
 	^ view

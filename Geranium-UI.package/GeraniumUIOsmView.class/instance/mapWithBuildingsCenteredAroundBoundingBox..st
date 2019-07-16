@@ -5,7 +5,7 @@ mapWithBuildingsCenteredAroundBoundingBox: aBoundingBox
 
 	"other info or handle the roads as lines etc"
 	view ifNil: [view := RTView new].
-	map := RTOSM new ratio: "100" 80.
+	map := RTOSM new ratio: "100" 50.
 	view add: map element.
 	mapData := self
 		retrieveMapDataDefinedAs: {'way["building"="yes"]' . 'way["highway"=residential]'}

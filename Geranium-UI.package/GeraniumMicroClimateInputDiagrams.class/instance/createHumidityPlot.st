@@ -6,10 +6,10 @@ createHumidityPlot
 	humidityPlot script: [ :v :c | 
 		|b|
 		processed ifNil: [processed := true. self processCanvas: c and: v].
-		b := report input climateProfile humidityPlot.
+		b := report input climateProfile dailyHumidityPlot.
 		b axisX
 			noDecimal;
-			title: 'Hour'.
+			title: 'Day'.
 		b axisY
 			noDecimal;
 			title: 'Humidity'.

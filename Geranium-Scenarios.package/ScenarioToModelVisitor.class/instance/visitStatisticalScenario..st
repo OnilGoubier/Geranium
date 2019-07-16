@@ -5,8 +5,9 @@ visitStatisticalScenario: aStatisticalScenario
 
 	areaOfInterest := AreaOfInterest new.
 	areaOfInterest coordinates: aStatisticalScenario coordinates.
-	numberOfBuildings := aStatisticalScenario resolveTotalNumberOfBuildings next.
-	numberOfDeclaredResidences := aStatisticalScenario resolveResidences.
+	"numberOfBuildings := aStatisticalScenario resolveTotalNumberOfBuildings next."
+	"numberOfDeclaredResidences := aStatisticalScenario resolveResidences."
+	numberOfDeclaredResidences := aStatisticalScenario nbResidencesPerCategory.
 	numberOfDeclaredPopulation := aStatisticalScenario resolvePopulation.
 	residenceDistribution := aStatisticalScenario urbanProfilesToPercentages.
 	resolvedResidenceProfiles := aStatisticalScenario resolveUrbanProfiles.
@@ -14,6 +15,7 @@ visitStatisticalScenario: aStatisticalScenario
 	trendsProfile := aStatisticalScenario resolveTrendsProfile.
 	weightsProfile := aStatisticalScenario resolveWeightsProfile.
 	years := aStatisticalScenario years next.
+	"self halt."
 	
 	buildings := OrderedCollection new.
 	
@@ -25,11 +27,15 @@ visitStatisticalScenario: aStatisticalScenario
 		[self check: numberOfDeclaredResidences versus: totalResidences] 
 			"and: [ self check: numberOfDeclaredPopulation versus: totalPopulation ])"
 			whileTrue: [ |building|
-				buildings "double dispatch and traversal logic in the visitor makes sense here"
-					add: (building := (self visitNode: (resolvedResidenceProfiles at: (residenceDistribution next)))).
-				building area: areaOfInterest .
-				totalResidences := totalResidences + building numberOfResidences.
-				totalPopulation := totalPopulation + building occupantSize.
+				building := (self visitNode: 
+									(resolvedResidenceProfiles at: (residenceDistribution next))).
+				(((building numberOfResidences > 1) and: ((totalResidences + building numberOfResidences) < numberOfDeclaredResidences)) or: (building numberOfResidences = 1))
+					ifTrue: [ 
+						buildings "double dispatch and traversal logic in the visitor makes sense here"
+						add: building.
+						building area: areaOfInterest .
+						totalResidences := totalResidences + building numberOfResidences.
+						totalPopulation := totalPopulation + building occupantSize.]
 			]. 
 	"]."
 	

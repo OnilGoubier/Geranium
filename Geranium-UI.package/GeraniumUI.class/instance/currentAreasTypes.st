@@ -1,7 +1,8 @@
 initialization
 currentAreasTypes
 
-		self areasTypes  		
+		self areasTypes
+			add: 'Log. Accession' -> #SocialHousing;  		
 			add: 'St. Eloi Collec.' -> #HLMNewBlock;
 			add: 'St. Eloi Indiv.' -> #PrivateHousing;
 			add: 'Geranium' -> #HLMRenovated;

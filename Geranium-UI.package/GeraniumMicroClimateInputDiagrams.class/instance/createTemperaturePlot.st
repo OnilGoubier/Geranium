@@ -6,11 +6,11 @@ createTemperaturePlot
 	temperaturePlot script: [ :v :c | 
 		|b|
 		processed ifNil: [processed := true. self processCanvas: c and: v].
-		b := report input climateProfile temperaturePlot.
+		b := report input climateProfile dailyTemperaturePlot.
 		b view: v.
 		b axisX
 			noDecimal;
-			title: 'Hour'.
+			title: 'Day'.
 		b axisY
 			noDecimal;
 			title: 'Temperature'.

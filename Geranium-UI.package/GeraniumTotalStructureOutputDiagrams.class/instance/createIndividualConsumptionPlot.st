@@ -35,13 +35,13 @@ createIndividualConsumptionPlot
 		v canvas camera "focusOnCenterScaled."focusOnCenterScaled: v canvas extent * self cameraScale.
 		"v @ RTDraggableView."
 		"v @ (RTGridView new gridSize: 10)."
-		lb := RTLegendBuilder new.
-		lb view: v.
+		"lb := RTLegendBuilder new.
+		lb view: v."
 		"lb addText: 'System complexity view'."
 		"self buildingProfileNames doWithIndex: [ :name :index |  lb addColorFadingFrom: (Color distinctTenStrongColors at: index) to: Color black text: name]."
 
-		self buildingProfileNames doWithIndex: [ :name :index | lb addColorFadingFrom: (self typesColors at: name asSymbol) to: Color black  text: name].
-		lb build.
+		"self buildingProfileNames doWithIndex: [ :name :index | lb addColorFadingFrom: (self typesColors at: name asSymbol) to: Color black  text: name].
+		lb build."
 		"v @ RTZoomableView.
 		v @ RTDoubleScrollBar."
 		v

@@ -18,7 +18,7 @@ histDict := self frequencies.
 "Each subclass of RTShape will be a bar"
 [ds points: histDict keys sorted] on: Error do: [ds points: histDict keys].
 
-"The height of a bar will be the number of methods (defined in the instance side)"
+"The height of a bar will be the number of instances (defined in the instance side)"
 ds y: [:x | histDict at: x].
 
 "We set a color of the rectangle"
