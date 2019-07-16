@@ -2,7 +2,7 @@ tests
 residencesBuildingBy: aNumber
 
 "
-GRCategoricalDistributionScenarioExamples new residencesBuildingBy: 50
+GRCategoricalDistributionScenarioExamples new residencesBuildingBy: 100
 "
 
 	| areaOfInterest totalResidences 

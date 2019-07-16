@@ -2,7 +2,7 @@ tests
 residencesExampleMultiplied: aNumber
 
 "
-GRCategoricalDistributionScenarioExamples new residencesExampleMultiplied: 16
+GRCategoricalDistributionScenarioExamples new residencesExampleMultiplied: 1
 "
 
 	| areaOfInterest totalResidences 

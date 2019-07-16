@@ -1,25 +1,25 @@
 initialization
-createHumidityPlot
-
+createTemperaturePlotSaved
+	
 	| processed |
-	humidityPlot := RoassalModel new.
-	humidityPlot script: [ :v :c | 
+	temperaturePlot := RoassalModel new.
+	temperaturePlot script: [ :v :c | 
 		|b|
 		processed ifNil: [processed := true. self processCanvas: c and: v].
-		b := report input climateProfile dailyHumidityPlot.
+		b := report input climateProfile temperaturePlot.
+		b view: v.
 		b axisX
 			noDecimal;
-			title: 'Day'.
+			title: 'Hour'.
 		b axisY
 			noDecimal;
-			title: 'Humidity'.
-		b view: v.
+			title: 'Temperature'.
 		b build.
 		v canvas camera "focusOnCenterScaled."focusOnCenterScaled: v canvas extent * self cameraScale.
 		v @ RTDraggableView.
-		"v @ (RTGridView new gridSize: 10)."
+		v @ (RTGridView new gridSize: 8).
 		v @ RTZoomableView.
 		v @ RTDoubleScrollBar.
-		v.
+		v
 	].
 	

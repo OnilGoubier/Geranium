@@ -1,12 +1,12 @@
 examples
-mapWithBuildingsCenteredAroundBoundingBox: aBoundingBox colored: catColorDistribution
+mapWithBuildingsCenteredAroundBoundingBox: aBoundingBox coloredSaved: catColorDistribution
 
 	"refactor in its own spec/roassal widget.."
 
 	"other info or handle the roads as lines etc"
 	| svgPath1 |
 	view ifNil: [view := RTView new].
-	map := RTOSM new ratio: 100 "10".
+	map := RTOSM new ratio: "100" 10.
 	view add: map element.
 	coordinatesBox := aBoundingBox.
 	mapData := self
@@ -26,5 +26,4 @@ mapWithBuildingsCenteredAroundBoundingBox: aBoundingBox colored: catColorDistrib
 	view @ RTDoubleScrollBar.
 	RTEmptyViewContext setOnView: view.
 	view canvas camera focusOnCenterScaled: view canvas extent * 1.1.
-	view canvas camera scale: 5.
 	^ view

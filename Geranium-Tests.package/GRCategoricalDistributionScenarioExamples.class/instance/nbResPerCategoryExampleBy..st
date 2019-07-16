@@ -1,5 +1,5 @@
 tests
-residencesNbOfResExampleBy: aNumber
+nbResPerCategoryExampleBy: aNumber
 
 "
 GRCategoricalDistributionScenarioExamples new residencesNbOfResExampleBy: 1

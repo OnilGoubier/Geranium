@@ -1,13 +1,12 @@
 visiting
-visitStatisticalScenario: aStatisticalScenario
+visitStatisticalScenarioSaved2: aStatisticalScenario
 
 	|totalResidences totalPopulation|
 
 	areaOfInterest := AreaOfInterest new.
 	areaOfInterest coordinates: aStatisticalScenario coordinates.
-	"numberOfBuildings := aStatisticalScenario resolveTotalNumberOfBuildings next."
-	"numberOfDeclaredResidences := aStatisticalScenario resolveResidences."
-	numberOfDeclaredResidences := aStatisticalScenario nbResidencesPerCategory.
+	numberOfBuildings := aStatisticalScenario resolveTotalNumberOfBuildings next.
+	numberOfDeclaredResidences := aStatisticalScenario resolveResidences.
 	numberOfDeclaredPopulation := aStatisticalScenario resolvePopulation.
 	residenceDistribution := aStatisticalScenario urbanProfilesToPercentages.
 	resolvedResidenceProfiles := aStatisticalScenario resolveUrbanProfiles.

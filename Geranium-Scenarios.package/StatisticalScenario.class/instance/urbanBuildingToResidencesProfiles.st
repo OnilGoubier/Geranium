@@ -1,5 +1,7 @@
 accessing
 urbanBuildingToResidencesProfiles
+
+" Not used currently"
 	
 	|residencesProfiles|
 	residencesProfiles := GRCategoricalDistribution new.
