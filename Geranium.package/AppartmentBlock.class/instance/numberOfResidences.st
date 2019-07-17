@@ -1,4 +1,4 @@
 accessing
 numberOfResidences
 
-	^ appartments values size
+	^ 12

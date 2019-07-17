@@ -3,5 +3,7 @@
 	"traitcomposition" : "TInstanceProperties",
 	"classtraitcomposition" : "TInstanceProperties classTrait",
 	"category" : "Geranium",
-	"name" : "TAgent"
+	"classinstvars" : [ ],
+	"name" : "TAgent",
+	"instvars" : [ ]
 }

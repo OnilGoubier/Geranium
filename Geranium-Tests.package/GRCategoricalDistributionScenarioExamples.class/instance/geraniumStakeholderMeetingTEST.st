@@ -11,7 +11,7 @@ geraniumStakeholderMeetingTEST
 			#HLMHousing.
 			#SocialHousing.
 			#PrivateHousing
-		} nb: { 13 . 48 . 108 . 19 . 11 }); 
+		} nb: { 108 . 48 . 13 . 11 . 19 }); 
 		climateProfile: #LaRochelleAverage;
 		trendsProfile: #RegionalConsumptionTrends;
 		weightsProfile: #ExceedingDPEHypothesis;
