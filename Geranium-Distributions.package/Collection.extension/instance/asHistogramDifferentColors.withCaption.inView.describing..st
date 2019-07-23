@@ -16,7 +16,7 @@ asHistogramDifferentColors: aDictionary withCaption: aString inView: aView descr
 	ds barShape
 		color: Color green;
 		width: 20.
-	ds interaction popupText: [:x | (self at: (anotherCollection indexOf: x)) asFloat round:1].
+	ds interaction popupText: [:x | (self at: (anotherCollection indexOf: x)) asFloat round:2].
 	b add: ds.
 	"ds
 		barChartWithBarTitle: [ :x | 

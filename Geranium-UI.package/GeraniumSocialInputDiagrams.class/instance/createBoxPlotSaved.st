@@ -1,5 +1,5 @@
 initialization
-createBoxPlot
+createBoxPlotSaved
 	
 	| incomes buildingProfiles residenceProfiles processed |
 	"buildingProfiles := report inputVisitor resolvedResidenceProfiles.
@@ -23,7 +23,7 @@ createBoxPlot
 	incomes := (residenceProfiles collect: [ :rp | rp name -> (rp income next: 100) ])
 		asOrderedCollection.
 		"self halt."
-		b := incomes sort boxedPlotColors: self typesColors  withCaption: nil inView: v.
+		b := incomes boxedPlot: (Color lightBrown) withCaption: nil inView: v.
 		b axisY
 			noDecimal;
 			title: 'Income'.
