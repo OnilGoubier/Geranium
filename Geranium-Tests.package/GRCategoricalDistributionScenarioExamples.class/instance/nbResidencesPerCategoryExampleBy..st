@@ -7,7 +7,7 @@ GRCategoricalDistributionScenarioExamples new nbResidencesPerCategoryExampleBy: 
 
 	| areaOfInterest totalResidences nbCreatedResidencesPerCategory totResidencesPerCategory nbCreatedBuildingsPerCategory buildings buildingsOrg cmp mySum
 	numberOfDeclaredResidences totalNumberOfDeclaredResidences resolvedResidenceProfiles
-	residenceDistribution residencesTypes residencesTypesOrg nbOfResidenceInBuilding|
+	residenceDistribution residencesTypes residencesTypesOrg |
 
 	self geraniumStakeholderMeetingTEST.
 	scenario := Scenario retrieve: #GeraniumTest.
@@ -22,7 +22,7 @@ GRCategoricalDistributionScenarioExamples new nbResidencesPerCategoryExampleBy: 
 	buildings := OrderedCollection new.	
 	totalResidences := 0.
 	totalNumberOfDeclaredResidences := numberOfDeclaredResidences values sum.
-	nbOfResidenceInBuilding := 0.
+	"nbOfResidenceInBuilding := 0."
 	nbCreatedResidencesPerCategory := Dictionary new.
 	nbCreatedBuildingsPerCategory := Dictionary new.
 	totResidencesPerCategory := Dictionary new.

@@ -1,7 +1,5 @@
 instance creation
-with: anAreaOfInterest andInput: visitor
-
-	|residencesTypesDPE residencesTypesDPERes|
+with: anAreaOfInterest andInputSaved: visitor
 	inputVisitor := visitor.
 	areaOfInterest := anAreaOfInterest.
 	categories := (areaOfInterest residences collect: [ :r | r category ]) asSet.
@@ -18,16 +16,7 @@ with: anAreaOfInterest andInput: visitor
 		(residencesTypesConsumption keys includes: scEntity)
 			ifTrue: [ residencesTypesConsumption at: scEntity put: ((residencesTypesConsumption at: scEntity) + (r historyOf: #consumption)) ]
 			ifFalse: [ residencesTypesConsumption at: scEntity put: (r historyOf: #consumption) ] 
-	]."
-
-residencesTypesDPE := Dictionary new.
-	areaOfInterest residences do: [ :r | |scEntity|
-		scEntity := (self scenarioEntityOf: r) name.
-		residencesTypesDPE at: scEntity ifPresent: [(residencesTypesDPE at: scEntity) add: r category]  ifAbsentPut: [{ r category } asOrderedCollection].
-	]. 
-residencesTypesDPERes := Dictionary new.
-	residencesTypesDPE keysAndValuesDo: [:k :v | residencesTypesDPERes at: k put: v frequencies].
-	residencesTypesDPERes inspect.
+	]." 
 	avgConsumptionPerYear := consumptionHistory sum.
 	self calculateConsumptionPerBuildingProfile.
 	Transcript

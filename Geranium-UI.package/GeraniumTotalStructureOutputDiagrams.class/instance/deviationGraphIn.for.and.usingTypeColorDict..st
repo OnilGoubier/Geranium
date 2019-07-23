@@ -56,7 +56,7 @@ deviationGraphIn: view for: averageDataPoints and: deviationDataPoints usingType
 		dec := FasterRTDevVarDecorator new.
 		dec
 			moveBehind;
-			deviation: "0.05" 0.005; 
+			deviation: "0.05" 0.003; 
 			color: (color alpha: 0.5);
 			points: seriesDevPair "key".
 		ds

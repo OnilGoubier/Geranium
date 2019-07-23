@@ -5,15 +5,13 @@ geraniumStakeholderMeeting
 		named: #Geranium;
 		coordinates: (46.16352961038194 @ -1.1302614212036133) 
 		-> (46.166851083597415 @ -1.1267745494842527);
-		totalNumberOfBuildings: 56; 
-		totalNumberOfResidences: 186; 
-		residencePercentages:{  
-			#HLMRenovatedBlock.
-			#HLMNewBlock.
+		nbResidencesForEachCategory:({  
+			#HLMRenovated.
+			#HLMNew.
 			#HLMHousing.
 			#SocialHousing.
 			#PrivateHousing
-		} % { 15.24 . 6.51 . 23.91 . 19.56 . 34.78 }; 
+		} nb: { 108 . 48 . 13 . 11 . 19 }); 
 		climateProfile: #LaRochelleAverage;
 		trendsProfile: #RegionalConsumptionTrends;
 		weightsProfile: #ExceedingDPEHypothesis;
@@ -58,7 +56,7 @@ geraniumStakeholderMeeting
 		named: #HLMHousing;
 		category: DPEA;
 		surface: [47.0 -> 92.0];
-		exposure: (3 ~ 1) | [0 -> 5]; 
+		exposure: "(3 ~ 1) | [0 -> 5];" 4.2 ~ 0.5 | [4->5] ;
 		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {18.18. 27.27 . 31.0 . 23.55}; 
 		numberOfChildren: [1 -> 4]; 
 		income: [(1150.0*12) -> (3000.0*12)];
@@ -69,7 +67,7 @@ geraniumStakeholderMeeting
 		named: #SocialHousing;
 		category: {DPED . DPEE} % {60.0 . 40.0};
 		surface: [60.0 -> 87.0];
-		exposure: (3 ~ 1) | [3 -> 5]; 
+		exposure: "(3 ~ 1) | [3 -> 5];" (4.2 ~ 0.5) | [4 -> 5];
 		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {44.44. 0.0 . 31.0 . 24.56}; 
 		numberOfChildren: [1 -> 2]; 
 		income: [(1150.0*12) -> (3000.0*12)];
@@ -80,7 +78,7 @@ geraniumStakeholderMeeting
 		named: #PrivateHousing;
 		category: {DPED . DPEE} % {60.0 . 40.0};
 		surface: [80.0 -> 160.0];
-		exposure: (3 ~ 1) | [0 -> 5]; 
+		exposure: "(3 ~ 1) | [0 -> 5];" (4.5 ~ 0.5) | [4 -> 5];
 		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {18.75. 12.50 . 31.0 . 37.75}; 
 		numberOfChildren: [1 -> 2]; 
 		income: [(1150.0*12) -> (4000.0*12)];

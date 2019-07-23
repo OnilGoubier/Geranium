@@ -28,6 +28,7 @@ testStats
 (false % 90) identityHistogram.
 ({ 0 . 1 . 2 } % { 10 . 20 . 70 }) plot.
 ({ #x . #y . #z } % { 10 . 20 . 70 }) identityHistogram.
+{ #x . #y . #z } nb: { 10 . 40 . 70 }.
 p := ClimateProfile new 
 		medianTemperature: (20.0 ~ 1.5) | [0 -> 32]; 
 		seasonalTemperatureVariation: 3;
@@ -36,4 +37,4 @@ p := ClimateProfile new
 p temperatureHistogram.
 p temperaturePlot.
 p humidityHistogram. 
-p humidityPlot.
+p humidityPlot. 
