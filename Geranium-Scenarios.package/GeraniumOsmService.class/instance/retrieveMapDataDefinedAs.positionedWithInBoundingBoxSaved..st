@@ -1,5 +1,5 @@
 examples
-retrieveMapDataDefinedAs: overpassDataTypeAndParamPairsStrings positionedWithInBoundingBox: positionBoxSouthWestNorthEastAsString
+retrieveMapDataDefinedAs: overpassDataTypeAndParamPairsStrings positionedWithInBoundingBoxSaved: positionBoxSouthWestNorthEastAsString
 	
 	| s |
 	

@@ -9,3 +9,4 @@ update
 	self updateMicroClimateInputDiagrams.
 	self updateTotalStructureOutputDiagrams.
 	self updateSocialMicroClimateOutputDiagrams.
+	self updateMapDiagram.

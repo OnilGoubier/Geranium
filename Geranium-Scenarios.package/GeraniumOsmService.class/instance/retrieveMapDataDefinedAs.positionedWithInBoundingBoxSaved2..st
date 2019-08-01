@@ -1,7 +1,7 @@
 examples
-retrieveMapDataDefinedAs: overpassDataTypeAndParamPairsStrings positionedWithInBoundingBox: positionBoxSouthWestNorthEastAsString
+retrieveMapDataDefinedAs: overpassDataTypeAndParamPairsStrings positionedWithInBoundingBoxSaved2: positionBoxSouthWestNorthEastAsString
 	
-	| s |
+	| s z|
 	
 	"you can consider serializing here and generally caching to avoid suprises with connection errors"
 	
@@ -16,9 +16,11 @@ retrieveMapDataDefinedAs: overpassDataTypeAndParamPairsStrings positionedWithInB
 				nextPut: $;;
 				nextPut: Character cr ].
 	s nextPutAll: ');out body;>;out skel qt;'.
-	^ ZnClient new
+	z := ZnClient new.
+	z
 		url: 'http://overpass-api.de/api/interpreter';
 		queryAt: 'data'
-		put: s contents; 
-		contentReader: [ :entity | NeoJSONReader fromString: entity contents ];
-		get
+		put: s contents. 
+		self halt.
+		z contentReader: [ :entity | NeoJSONReader fromString: entity contents ].
+		^ z get.

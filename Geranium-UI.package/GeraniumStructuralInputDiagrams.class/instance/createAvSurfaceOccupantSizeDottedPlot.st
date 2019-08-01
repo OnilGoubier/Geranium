@@ -35,17 +35,18 @@ createAvSurfaceOccupantSizeDottedPlot
 		"typePoint := Dictionary new.
 		typeSize  keys asOrderedCollection with: (typeSurface keys asOrderedCollection)
 			do: [ :ka : kb| typePoint  at: ka put: (Point x: (typeSize at: ka) y: (typeSurface at: kb)) 				]."
+							"self halt."
 		g := typeSurfaceSizeAll dottedPointPlotWithLabelAndColorsInView: v.
 		
 		g axisX
-			noDecimal;
+			"noDecimal;"
 			title: 'OccupantSize'.";
 			fromPoint: 0@0."
 		g axisY
-			noDecimal;
+			"noDecimal;"
 			title: 'Avg. Surface'.
 		"g addDecorator: (RTCursorFollower new color: Color blue)." "FOLLOWING WITH THE MOUSE..."
-		g minX: 0.
+		"g minX: 0."
 		g build.
 		g view.
 		v canvas camera "focusOnCenterScaled."focusOnCenterScaled: v canvas extent * self cameraScale.

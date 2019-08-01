@@ -8,6 +8,7 @@ step: time
 	weightsProfile := self area prefecture country weightsProfile.
 	
 	seasonalTrend := self area prefecture country seasonalProfile series at: time. 
+	
 	consumption := consumption + 
 		(self consumptionForWeightInterval: weightsProfile season andTrend: seasonalTrend). 
 	

@@ -1,0 +1,4 @@
+updating
+updateMapDiagram
+
+	mapDiagram smoothRefresh.

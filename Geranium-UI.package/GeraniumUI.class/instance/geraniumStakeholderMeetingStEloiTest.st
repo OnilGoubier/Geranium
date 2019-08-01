@@ -1,10 +1,10 @@
 scripts
-geraniumStakeholderMeeting
+geraniumStakeholderMeetingStEloiTest
 
 	StatisticalScenario new 
 		named: #Geranium;
-		coordinates: (46.157091 @ -1.191229) 
-		-> (46.160995 @ -1.179985);
+		coordinates: (46.16352961038194 @ -1.1302614212036133) 
+		-> (46.166851083597415 @ -1.1267745494842527);
 		nbResidencesForEachCategory:({  
 			#HLMRenovated.
 			#HLMNew.
