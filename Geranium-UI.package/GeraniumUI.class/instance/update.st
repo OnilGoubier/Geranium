@@ -4,6 +4,8 @@ update
 	self updateReport.
 	consumptionHistory := nil.
 	consumptionHistoryCumSum := nil.
+	areaLegend := nil.
+	minMaxConsumptionLabels := nil.
 	self updateStructuralInputDiagrams.
 	self updateSocialInputDiagrams.
 	self updateMicroClimateInputDiagrams.

@@ -16,6 +16,7 @@ retrieveMapDataDefinedAs: overpassDataTypeAndParamPairsStrings positionedWithInB
 				nextPut: $;;
 				nextPut: Character cr ].
 	s nextPutAll: ');out body;>;out skel qt;'.
+	'GeraniumOSMService' logCr.
 	^ ZnClient new
 		url: 'http://overpass-api.de/api/interpreter';
 		queryAt: 'data'

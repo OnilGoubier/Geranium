@@ -4,7 +4,7 @@ geraniumStakeholderMeetingPortNeufTest
 	StatisticalScenario new 
 		named: #Geranium;
 		coordinates: (46.157091 @ -1.191229) 
-		-> (46.160995 @ -1.179985);
+		-> (46,160412473 @ -1.179985);
 		nbResidencesForEachCategory:({  
 			#HLMRenovated.
 			#HLMNew.

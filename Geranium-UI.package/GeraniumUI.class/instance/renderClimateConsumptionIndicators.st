@@ -1,6 +1,8 @@
 rendering
 renderClimateConsumptionIndicators
 	| consumption temperature humidity currentConsumption |
+	
+	'indicator' logCr.
 	consumptionLabel
 		ifNotNil: [ mapView view
 				removeElement: consumptionLabel;

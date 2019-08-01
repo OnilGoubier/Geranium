@@ -1,5 +1,5 @@
 rendering
-renderArealLegend
+renderArealLegendSaved2
 	areaLegend
 		ifNil: [ "should be se by the dsl normally"
 			areaLegend := {
@@ -24,6 +24,7 @@ renderArealLegend
 				self legendItemAt: 34 
 					colored: (Color gray  alpha: 0.9) 
 					text: 'Other'.
-			} flatten do: [ :i | mapView view add: i ]].
-		"tempContinue = false
-		ifTrue: [ mapView view signalUpdate ]"
+			}].
+		areaLegend flatten do: [ :i | mapView view add: i ].
+		tempContinue = false
+		ifTrue: [ mapView view signalUpdate ]

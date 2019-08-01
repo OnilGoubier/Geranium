@@ -3,8 +3,8 @@ geraniumStakeholderMeeting
 
 	StatisticalScenario new 
 		named: #Geranium;
-		coordinates: (46.157091 @ -1.191229) 
-		-> (46.160995 @ -1.179985);
+		coordinates: (46.158121 @ -1.185736) 
+		-> (46.161442473 @ -1.182249128);
 		nbResidencesForEachCategory:({  
 			#HLMRenovated.
 			#HLMNew.

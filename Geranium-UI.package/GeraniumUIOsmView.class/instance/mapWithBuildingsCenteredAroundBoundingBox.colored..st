@@ -5,6 +5,7 @@ mapWithBuildingsCenteredAroundBoundingBox: aBoundingBox colored: catColorDistrib
 
 	"other info or handle the roads as lines etc"
 	| svgPath1 |
+	
 	view ifNil: [view := RTView new].
 	map := RTOSM new ratio: 100 "10".
 	view add: map element.
@@ -17,6 +18,7 @@ mapWithBuildingsCenteredAroundBoundingBox: aBoundingBox colored: catColorDistrib
 		of: mapData for: view asPolygonIn: map 
 		withColor: [:item | catColorDistribution next"Color blue"] 
 		borderColor: [:item | Color black] andWidth: 3.
+		'GeraniumUIOsmView' logCr.
 	"self renderKiviatIn: view."
 	view canvas addMenuAsSVG: self zoomInSVG scale: 0.1 callback: [ RTZoomInMove on: view ].
 	"view canvas addMenu: ' + Zoom In ' callback: [ RTZoomInMove on: view ]."
