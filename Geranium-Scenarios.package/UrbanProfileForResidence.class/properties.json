@@ -13,7 +13,10 @@
 		"awareness",
 		"ownership",
 		"numberOfChildren",
-		"category"
+		"category",
+		"transportMode",
+		"consumptionChoice",
+		"peakOffPeakHours"
 	],
 	"name" : "UrbanProfileForResidence",
 	"type" : "normal"

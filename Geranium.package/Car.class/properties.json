@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TransportMode",
+	"category" : "Geranium",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Car",
+	"type" : "normal"
+}

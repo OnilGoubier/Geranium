@@ -5,14 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"income",
-		"ownership",
-		"awareness",
-		"transportMode",
-		"consumptionChoice",
-		"peakOffPeakHours"
-	],
-	"name" : "Occupants",
+	"instvars" : [ ],
+	"name" : "TransportMode",
 	"type" : "normal"
 }

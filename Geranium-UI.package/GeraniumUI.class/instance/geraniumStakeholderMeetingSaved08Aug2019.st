@@ -1,15 +1,13 @@
-as yet unclassified
-fullGeraniumTestScript
+scripts
+geraniumStakeholderMeetingSaved08Aug2019
 
 	StatisticalScenario new 
-		named: #GeraniumTest;
-		coordinates: (46.16352961038194 @ -1.1302614212036133) 
-		-> (46.166851083597415 @ -1.1267745494842527);
-		totalNumberOfBuildings: 56; 
-		totalNumberOfResidences: 186; 
-		residencePercentages:({  
-			#HLMRenovatedBlock.
-			#HLMNewBlock.
+		named: #Geranium;
+		coordinates: (46.158121 @ -1.185736) 
+		-> (46.161442473 @ -1.182249128);
+		nbResidencesForEachCategory:({  
+			#HLMRenovated.
+			#HLMNew.
 			#HLMHousing.
 			#SocialHousing.
 			#PrivateHousing
@@ -41,10 +39,7 @@ fullGeraniumTestScript
 		occupantClass: {SingleAdult . Couple . SingleParent. Family} % {12.5 . 19.0 . 31.0 . 37.5}; 
 		numberOfChildren: [1 -> 4]; 
 		income: [(1150.0*12) -> (4000.0*12)];
-		"awareness: {ConsumptionAware . ConsumptionUnaware} % {31.25 . 68.75};"
-		transportMode: {OnFoot . PublicTransport . Bicycle . Car . Other } % { 5 . 5 . 14 . 71 . 5 };
-		consumptionChoice: {AlwaysEnvFriendly . SometimesEnvFriendly . NeverEnvFriendly } % { 23 . 24 . 53 };
-		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware } % { 31 . 69 };
+		awareness: {ConsumptionAware . ConsumptionUnaware} % {31.25 . 68.75};
 		ownership: false % 100.
 		
 	UrbanProfileForAppartment new 
@@ -54,52 +49,40 @@ fullGeraniumTestScript
 		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {42.10 . 11.06 . 31.0 . 15.84};
 		numberOfChildren: [1 -> 3]; 
 		income: [(1150.0*12) -> (3000.0*12)];
-		"awareness: {ConsumptionAware . ConsumptionUnaware} % {31.58 . 68.42};"
-		transportMode: {OnFoot . PublicTransport . Bicycle . Car . Other  } % {5 . 5 . 14 . 71 . 5 };
-		consumptionChoice: {AlwaysEnvFriendly . SometimesEnvFriendly . NeverEnvFriendly  } % { 23 . 24 . 53 };
-		peakOffPeakHours: { PeakOffPeakHoursAware . PeakOffPeakHoursUnaware } % { 31 . 69 };
+		awareness: {ConsumptionAware . ConsumptionUnaware} % {31.58 . 68.42};
 		ownership: false % 100.
 		
 	UrbanProfileForHouse new 
 		named: #HLMHousing;
 		category: DPEA;
 		surface: [47.0 -> 92.0];
-		exposure: (4.2 ~ 0.5) | [4->5]; 
+		exposure: "(3 ~ 1) | [0 -> 5];" (4.2 ~ 0.5) | [4->5] ;
 		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {18.18. 27.27 . 31.0 . 23.55}; 
 		numberOfChildren: [1 -> 4]; 
 		income: [(1150.0*12) -> (3000.0*12)];
-		"awareness: {ConsumptionAware . ConsumptionUnaware} % {18.18 . 81.82};"
-		transportMode: {OnFoot . PublicTransport . Bicycle . Car . Other  } % { 6 . 3 . 11 . 74 . 6 };
-		consumptionChoice: {AlwaysEnvFriendly . SometimesEnvFriendly . NeverEnvFriendly  } % { 18 . 23 . 59 };
-		peakOffPeakHours: { PeakOffPeakHoursAware . PeakOffPeakHoursUnaware } % { 3 . 7 };
+		awareness: {ConsumptionAware . ConsumptionUnaware} % {18.18 . 81.82};
 		ownership: false % 100.
 	
 	UrbanProfileForHouse new 
 		named: #SocialHousing;
 		category: {DPED . DPEE} % {60.0 . 40.0};
 		surface: [60.0 -> 87.0];
-		exposure: (4.2 ~ 0.5) | [4 -> 5]; 
+		exposure: "(3 ~ 1) | [3 -> 5];" (4.2 ~ 0.5) | [4 -> 5];
 		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {44.44. 0.0 . 31.0 . 24.56}; 
 		numberOfChildren: [1 -> 2]; 
 		income: [(1150.0*12) -> (3000.0*12)];
-		"awareness: {ConsumptionAware . ConsumptionUnaware} % {33.33 . 66.67};"
-		transportMode: {OnFoot . PublicTransport . Bicycle . Car . Other  } % {5 . 6 . 14 . 70 . 5  };
-		consumptionChoice: {AlwaysEnvFriendly . SometimesEnvFriendly . NeverEnvFriendly  } % {24 . 24 . 52  };
-		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware  } % { 31 . 69 };
+		awareness: {ConsumptionAware . ConsumptionUnaware} % {33.33 . 66.67};
 		ownership: true % 100.
 	
 	UrbanProfileForHouse new 
 		named: #PrivateHousing;
 		category: {DPED . DPEE} % {60.0 . 40.0};
 		surface: [80.0 -> 160.0];
-		exposure: (4.5 ~ 0.5) | [4 -> 5]; 
+		exposure: "(3 ~ 1) | [0 -> 5];" (4.5 ~ 0.5) | [4 -> 5];
 		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {18.75. 12.50 . 31.0 . 37.75}; 
 		numberOfChildren: [1 -> 2]; 
 		income: [(1150.0*12) -> (4000.0*12)];
-		"awareness: {ConsumptionAware . ConsumptionUnaware} % {68.75 . 31.25};"
-		transportMode: {OnFoot . PublicTransport . Bicycle . Car . Other  } % {2 . 12 . 21 . 63 . 2  };
-		consumptionChoice: {AlwaysEnvFriendly . SometimesEnvFriendly . NeverEnvFriendly  } % { 38 . 26 . 36 };
-		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware  } % {36 . 64  };
+		awareness: {ConsumptionAware . ConsumptionUnaware} % {68.75 . 31.25};
 		ownership: true % 100.	
 	
 	ClimateProfile new "4 Season"
@@ -146,3 +129,4 @@ fullGeraniumTestScript
 		day: [ -0.10 -> 0.10 ];  "10%"
 		hour: [ -0.10 -> 0.10 ]; "10%"
 		season: [ -0.05 -> 0.05 ].	"5%"
+	

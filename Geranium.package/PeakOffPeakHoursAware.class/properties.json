@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PeakOffPeakHours",
+	"category" : "Geranium",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PeakOffPeakHoursAware",
+	"type" : "normal"
+}
