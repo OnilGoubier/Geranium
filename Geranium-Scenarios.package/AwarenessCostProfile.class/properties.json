@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CostProfile",
+	"category" : "Geranium-Scenarios",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nbOfTimes",
+		"successProbabilities"
+	],
+	"name" : "AwarenessCostProfile",
+	"type" : "normal"
+}

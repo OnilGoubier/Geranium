@@ -1,0 +1,4 @@
+accessing
+costPerResidence
+
+	^ costPerResidence 

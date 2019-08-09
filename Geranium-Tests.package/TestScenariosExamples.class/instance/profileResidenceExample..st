@@ -1,14 +1,13 @@
 as yet unclassified
-profileHLMNewExample
+profileResidenceExample: aSymbol
 
 "
-TestScenariosExamples new profileHLMNewExample
+TestScenariosExamples new profileResidenceExample: #HLMRenovated
 "
 
 	self fullGeraniumTestScript.
 	scenario := Scenario retrieve: #GeraniumTest.
-	"scenario inspect."
-	profile := Profile retrieve: #HLMNew.
+	profile := Profile retrieve: aSymbol.
 	profile awareness.
 	profile inspect.
 	

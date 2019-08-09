@@ -1,0 +1,26 @@
+{
+	"commentStamp" : "",
+	"super" : "AwarenessCostProfile",
+	"category" : "Geranium-Scenarios",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"averageCostOfWorkshops",
+		"averageCostOfMeetings",
+		"averageCostOfCouncilMeetings",
+		"averageCostOfForums",
+		"averageCostOfSurveys",
+		"averageCostOfStudies",
+		"nbOfWorkshops",
+		"nbOfMeetings",
+		"nbOfCouncilMeetings",
+		"nbOfForums",
+		"nbOfSurveys",
+		"nbOfStudies",
+		"nbOfParticipants",
+		"contractCost"
+	],
+	"name" : "AwarenessCostProfileForDialogue",
+	"type" : "normal"
+}

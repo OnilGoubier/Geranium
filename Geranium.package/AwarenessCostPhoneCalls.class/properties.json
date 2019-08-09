@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "AwarenessCost",
+	"category" : "Geranium",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nbOfTimes",
+		"nbOfResidences",
+		"unawareProbability",
+		"nbOfUnawares"
+	],
+	"name" : "AwarenessCostPhoneCalls",
+	"type" : "normal"
+}

@@ -1,5 +1,5 @@
 as yet unclassified
-fullGeraniumTestScript
+fullGeraniumTestScriptSaved09Aug2019
 
 	StatisticalScenario new 
 		named: #GeraniumTest;
@@ -146,29 +146,3 @@ fullGeraniumTestScript
 		day: [ -0.10 -> 0.10 ];  "10%"
 		hour: [ -0.10 -> 0.10 ]; "10%"
 		season: [ -0.05 -> 0.05 ].	"5%"
-			
-	AwarenessCostProfileForTelephone new "Cost to improve people awareness using phone calls"
-		named: #AwarenessByPhoneCostEstimation;
-		costPerResidence: (11.0 ~ 2); "in € per residence"
-		duration: [ 1 -> 3 ]; "duration in months"
-		nbOfTimes: (5.0 ~ 0.5) | [4 -> 6].
-		
-	AwarenessCostProfileForDialogue new "Cost to improve people awareness using workshops, meetings, co,ferences, ..."
-		named: #AwarenessByDialogueCostEstimation;
-		duration: [ 24 -> 36 ]; "duration in months"
-		nbOfTimes: (18.0 ~ 3) | [10 -> 25]; "number of workshops / meetings"
-		averageCostOfMeetings: (150.0 ~ 25.0);
-		nbOfMeetings: [1 -> 2];
-		averageCostOfCouncilMeetings: (225.0 ~ 25.0);
-		nbOfCouncilMeetings: [1 -> 2];
-		averageCostOfForums: (300.0 ~ 30.00);
-		nbOfForums: [ 1 -> 3 ];
-		averageCostOfStudies: (150.0 ~ 25);
-		nbOfStudies: [ 1 -> 2 ];
-		averageCostOfSurveys: (150.0 ~ 15);
-		nbOfSurveys: [ 2 -> 3 ];
-		averageCostOfWorkshops: (300 ~ 30);
-		nbOfWorkshops: [6 -> 10];
-		contractCost: (150.0 ~ 25).
-		
-	

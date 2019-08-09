@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Cost",
+	"category" : "Geranium",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"successProbability"
+	],
+	"name" : "AwarenessCost",
+	"type" : "normal"
+}
