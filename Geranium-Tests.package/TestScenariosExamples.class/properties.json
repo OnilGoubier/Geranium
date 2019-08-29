@@ -7,7 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"scenario",
-		"profile"
+		"profile",
+		"visitor",
+		"areaOfInterest"
 	],
 	"name" : "TestScenariosExamples",
 	"type" : "normal"

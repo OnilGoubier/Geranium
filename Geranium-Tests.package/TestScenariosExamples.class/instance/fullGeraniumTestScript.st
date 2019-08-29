@@ -7,7 +7,7 @@ fullGeraniumTestScript
 		-> (46.166851083597415 @ -1.1267745494842527);
 		totalNumberOfBuildings: 56; 
 		totalNumberOfResidences: 186; 
-		residencePercentages:({  
+		nbResidencesForEachCategory:({  
 			#HLMRenovated.
 			#HLMNew.
 			#HLMHousing.
@@ -17,6 +17,7 @@ fullGeraniumTestScript
 		climateProfile: #LaRochelleAverage;
 		trendsProfile: #RegionalConsumptionTrends;
 		weightsProfile: #ExceedingDPEHypothesis;
+		awarenessTelephoneCostProfile: #AwarenessByPhoneCostEstimation;
 		seed: 23424080;
 		years: 1.		
 		
@@ -147,17 +148,17 @@ fullGeraniumTestScript
 		hour: [ -0.10 -> 0.10 ]; "10%"
 		season: [ -0.05 -> 0.05 ].	"5%"
 			
-	AwarenessCostProfileForTelephone new "Cost to improve people awareness using phone calls"
+	AwarenessTelephoneCostProfile new "Cost to improve people awareness using phone calls"
 		named: #AwarenessByPhoneCostEstimation;
 		costPerResidence: (11.0 ~ 2); "in € per residence"
 		duration: [ 1 -> 3 ]; "duration in months"
-		nbOfTimes: (5.0 ~ 0.5) | [4 -> 6].
+		nbOfTimes: 0"(5.0 ~ 0.5) | [4 -> 6]".
 		
-	AwarenessCostProfileForDialogue new "Cost to improve people awareness using workshops, meetings, co,ferences, ..."
-		named: #AwarenessByDialogueCostEstimation;
-		duration: [ 24 -> 36 ]; "duration in months"
-		nbOfTimes: (18.0 ~ 3) | [10 -> 25]; "number of workshops / meetings"
-		averageCostOfMeetings: (150.0 ~ 25.0);
+	"AwarenessCostProfileForConcertation new" "Cost to improve people awareness using workshops, meetings, co,ferences, ..."
+		"named: #AwarenessByDialogueCostEstimation;
+		duration: [ 24 -> 36 ];" "duration in months"
+		"nbOfTimes: (18.0 ~ 3) | [10 -> 25]; ""number of workshops / meetings"
+		"averageCostOfMeetings: (150.0 ~ 25.0);
 		nbOfMeetings: [1 -> 2];
 		averageCostOfCouncilMeetings: (225.0 ~ 25.0);
 		nbOfCouncilMeetings: [1 -> 2];
@@ -169,6 +170,8 @@ fullGeraniumTestScript
 		nbOfSurveys: [ 2 -> 3 ];
 		averageCostOfWorkshops: (300 ~ 30);
 		nbOfWorkshops: [6 -> 10];
-		contractCost: (150.0 ~ 25).
+		contractCost: (150.0 ~ 25)."
+		
+
 		
 	

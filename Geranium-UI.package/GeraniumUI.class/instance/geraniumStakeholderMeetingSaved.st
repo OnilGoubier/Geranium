@@ -131,4 +131,5 @@ geraniumStakeholderMeetingSaved
 		day: [ -0.10 -> 0.10 ];  "10%"
 		hour: [ -0.10 -> 0.10 ]; "10%"
 		season: [ -0.05 -> 0.05 ].	"5%"
+
 	

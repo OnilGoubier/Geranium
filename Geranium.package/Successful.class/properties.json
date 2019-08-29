@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Success",
+	"category" : "Geranium",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Successful",
+	"type" : "normal"
+}

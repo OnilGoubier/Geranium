@@ -6,8 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"nbOfTimes",
-		"nbOfResidences",
 		"unawareProbability",
 		"nbOfUnawares"
 	],

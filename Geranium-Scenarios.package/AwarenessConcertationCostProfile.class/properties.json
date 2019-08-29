@@ -21,6 +21,6 @@
 		"nbOfParticipants",
 		"contractCost"
 	],
-	"name" : "AwarenessCostProfileForDialogue",
+	"name" : "AwarenessConcertationCostProfile",
 	"type" : "normal"
 }

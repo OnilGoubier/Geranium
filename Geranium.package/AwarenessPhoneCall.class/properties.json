@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "AwarenessCampaign",
+	"category" : "Geranium",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "AwarenessPhoneCall",
+	"type" : "normal"
+}

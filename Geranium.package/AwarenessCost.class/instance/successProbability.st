@@ -1,4 +1,0 @@
-accessing
-successProbability
-
-	^ successProbability  

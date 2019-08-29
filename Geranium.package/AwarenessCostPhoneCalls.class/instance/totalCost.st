@@ -1,6 +1,6 @@
 computing
 totalCost 
 
-	^ nbOfTimes * nbOfResidences * unawareProbability.
+	^ nbOfResidences * unawareProbability * costPerResidence.
 
 	

@@ -6,7 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"successProbability"
+		"successProbabilityFirst",
+		"nbOfTimes",
+		"nbOfResidences"
 	],
 	"name" : "AwarenessCost",
 	"type" : "normal"

@@ -1,4 +1,4 @@
 accessing
 averageCostOfCouncilMeetings
 
-	^ averageCostOfCouncilMeetings 
+	^ averageCostOfCouncilMeetings

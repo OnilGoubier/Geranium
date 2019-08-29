@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Geranium",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"totalCost",
+		"costPerResidence",
+		"nbOfTimes",
+		"residences",
+		"convertedResidences",
+		"success"
+	],
+	"name" : "AwarenessCampaign",
+	"type" : "normal"
+}

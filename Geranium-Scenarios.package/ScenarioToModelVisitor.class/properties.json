@@ -8,6 +8,8 @@
 		"climateProfile",
 		"trendsProfile",
 		"weightsProfile",
+		"residences",
+		"awarenessTelephoneCostProfile",
 		"buildings",
 		"scenarioToModelDict",
 		"modelToScenarioDict",
@@ -18,7 +20,7 @@
 		"climate",
 		"numberOfDeclaredResidences",
 		"numberOfDeclaredPopulation",
-		"residences"
+		"awarenessByPhone"
 	],
 	"name" : "ScenarioToModelVisitor",
 	"commentStamp" : "",

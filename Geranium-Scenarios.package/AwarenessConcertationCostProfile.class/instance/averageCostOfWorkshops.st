@@ -1,4 +1,4 @@
 accessing
 averageCostOfWorkshops
 
-	^ averageCostOfWorkshops 
+	^ averageCostOfWorkshops

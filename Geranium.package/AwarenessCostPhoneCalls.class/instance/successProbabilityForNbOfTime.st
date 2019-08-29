@@ -1,6 +1,6 @@
 computing
 successProbabilityForNbOfTime
 
-	 ^ (successProbability raisedTo: nbOfTimes). 
+	 ^ self successProbabilityFor:  nbOfTimes
 
 	

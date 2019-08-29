@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"totalCost"
+		"totalCost",
+		"costPerResidence"
 	],
 	"name" : "Cost",
 	"type" : "normal"

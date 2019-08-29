@@ -17,6 +17,7 @@ geraniumStakeholderMeeting
 		climateProfile: #LaRochelleAverage;
 		trendsProfile: #RegionalConsumptionTrends;
 		weightsProfile: #ExceedingDPEHypothesis;
+		awarenessTelephoneCostProfile: #AwarenessByPhoneCostEstimation;
 		seed: 23424080;
 		years: 1.		
 		
@@ -146,4 +147,10 @@ geraniumStakeholderMeeting
 		day: [ -0.10 -> 0.10 ];  "10%"
 		hour: [ -0.10 -> 0.10 ]; "10%"
 		season: [ -0.05 -> 0.05 ].	"5%"
+						
+	AwarenessTelephoneCostProfile new "Cost to improve people awareness using phone calls"
+		named: #AwarenessByPhoneCostEstimation;
+		costPerResidence: (11.0 ~ 2); "in € per residence"
+		duration: [ 1 -> 3 ]; "duration in months"
+		nbOfTimes: 3 "number of time to call a residence".
 	

@@ -1,8 +1,8 @@
 as yet unclassified
-profileResidenceExample: aSymbol
+residenceProfileExample: aSymbol
 
 "
-TestScenariosExamples new profileResidenceExample: #HLMRenovated
+TestScenariosExamples new residenceProfileExample: #HLMRenovated
 "
 
 	self fullGeraniumTestScript.

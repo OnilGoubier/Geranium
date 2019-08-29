@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "AwarenessCost",
+	"category" : "Geranium",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"unawareProbability",
+		"nbOfUnawares"
+	],
+	"name" : "AwarenessCostConcertation",
+	"type" : "normal"
+}
