@@ -6,7 +6,7 @@ convertResidencesForCampaignNbOfTime: aNumber
 	1 to: aNumber do:
 		[:i | p := self successProbabilityFor: i.
 		self success probabilities: { p . 1-p }.
-
+	
 		convResidences := OrderedCollection new.
 		convResidences := (self residences at: i) select: [ :r |self success next = Successful].
 	   convResidences isNotEmpty ifTrue:

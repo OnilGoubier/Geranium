@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"successProbabilities"
+		"totalSuccessProbabilities"
 	],
-	"name" : "AwarenessPhoneCall",
+	"name" : "AwarenessConcertation",
 	"type" : "normal"
 }

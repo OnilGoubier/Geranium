@@ -1,10 +1,10 @@
 as yet unclassified
-awarenessPhoneExample: aSymbol
+awarenessPhoneProbDisplayExample: aSymbol
 
 "
-TestScenariosExamples new awarenessPhoneExample: #AwarenessByPhoneCostEstimation
+TestScenariosExamples new awarenessPhoneProbDisplayExample: #AwarenessByPhoneCostEstimation
 "
-	| cR myPoints |
+	| cR |
 	self fullGeraniumTestScript.
 	scenario := Scenario retrieve: #GeraniumTest.
 	visitor := ScenarioToModelVisitor new.
@@ -14,12 +14,9 @@ TestScenariosExamples new awarenessPhoneExample: #AwarenessByPhoneCostEstimation
 	"profile inspect."
 	visitor awarenessByPhone: (visitor visitAwarenessCostProfile: profile ofClass: AwarenessPhoneCall).
 	"visitor inspect."
-	cR := visitor awarenessByPhone convertResidences.
+	cR := visitor awarenessByPhone computeSuccessProbabilities: 4.
 	cR inspect.
 	
-	myPoints := OrderedCollection new.
-	cR convertedResidences with: cR residences do: 
-		[ :cr :r | myPoints add: cr size / r size ].
-	[ myPoints connectedDottedPlot: Color red withCaption: 'Awareness by Phone Conversion'] value inspect.
+	[ cR successProbabilities  connectedDottedPlot: Color red withCaption: 'Awareness by Phone Probabilities'] value inspect.
 	
 	

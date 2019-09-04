@@ -1,0 +1,4 @@
+accessing
+awarenessConcertationCostProfile: anObject
+
+	awarenessConcertationCostProfile := anObject

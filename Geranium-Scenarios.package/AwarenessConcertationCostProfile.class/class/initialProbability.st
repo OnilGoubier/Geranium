@@ -1,4 +1,4 @@
-accessing
+acessing
 initialProbability
 	
-	^ 0.1446
+	^ 0.0982

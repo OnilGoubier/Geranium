@@ -9,7 +9,8 @@
 		"weightsProfile",
 		"years",
 		"numberOfBuildingsDeterminedByMap",
-		"awarenessTelephoneCostProfile"
+		"awarenessTelephoneCostProfile",
+		"awarenessConcertationCostProfile"
 	],
 	"name" : "Scenario",
 	"commentStamp" : "",

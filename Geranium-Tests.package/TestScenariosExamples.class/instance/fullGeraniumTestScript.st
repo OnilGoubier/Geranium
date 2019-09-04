@@ -18,6 +18,7 @@ fullGeraniumTestScript
 		trendsProfile: #RegionalConsumptionTrends;
 		weightsProfile: #ExceedingDPEHypothesis;
 		awarenessTelephoneCostProfile: #AwarenessByPhoneCostEstimation;
+		awarenessConcertationCostProfile: #AwarenessByConcertationCostEstimation;
 		seed: 23424080;
 		years: 1.		
 		
@@ -152,13 +153,13 @@ fullGeraniumTestScript
 		named: #AwarenessByPhoneCostEstimation;
 		costPerResidence: (11.0 ~ 2); "in € per residence"
 		duration: [ 1 -> 3 ]; "duration in months"
-		nbOfTimes: 0"(5.0 ~ 0.5) | [4 -> 6]".
+		nbOfTimes: 4"(5.0 ~ 0.5) | [4 -> 6]".
 		
-	"AwarenessCostProfileForConcertation new" "Cost to improve people awareness using workshops, meetings, co,ferences, ..."
-		"named: #AwarenessByDialogueCostEstimation;
-		duration: [ 24 -> 36 ];" "duration in months"
-		"nbOfTimes: (18.0 ~ 3) | [10 -> 25]; ""number of workshops / meetings"
-		"averageCostOfMeetings: (150.0 ~ 25.0);
+	AwarenessConcertationCostProfile new "Cost to improve people awareness using workshops, meetings, coferences, ..."
+		named: #AwarenessByConcertationCostEstimation;
+		duration: [ 24 -> 36 ]; "duration in months"
+		nbOfTimes: 4; "number of concertations"
+		averageCostOfMeetings: (150.0 ~ 25.0);
 		nbOfMeetings: [1 -> 2];
 		averageCostOfCouncilMeetings: (225.0 ~ 25.0);
 		nbOfCouncilMeetings: [1 -> 2];
@@ -170,7 +171,7 @@ fullGeraniumTestScript
 		nbOfSurveys: [ 2 -> 3 ];
 		averageCostOfWorkshops: (300 ~ 30);
 		nbOfWorkshops: [6 -> 10];
-		contractCost: (150.0 ~ 25)."
+		contractCost: (150.0 ~ 25).
 		
 
 		

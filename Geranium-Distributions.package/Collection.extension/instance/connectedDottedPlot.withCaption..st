@@ -1,5 +1,5 @@
 *Geranium-Distributions
-connectedDottedPlot: aColor withCaption: aString inView: aView
+connectedDottedPlot: aColor withCaption: aString
 
 	| b ds |
 	
@@ -8,7 +8,7 @@ connectedDottedPlot: aColor withCaption: aString inView: aView
 		connectedDottedPlot: Color red withCaption: 'hallo'] value"
 	
 	b := RTGrapher new.
-	aView ifNotNil: [ b view: aView ].
+	"aView ifNotNil: [ b view: aView ]."
 	b extent: self vizSize.
 	ds := RTData new.
 		ds points: self.
@@ -17,8 +17,8 @@ connectedDottedPlot: aColor withCaption: aString inView: aView
 	b
 		axisX;
 		axisY.
-	self size > 1 ifTrue: [
+	"self size > 1 ifTrue: [
 		b addDecorator: RTMeanDevVarDecorator new moveInFront
-	].
+	]."
 	aString ifNotNil: [self addLabel: aString onGraph: b].
 	^ b

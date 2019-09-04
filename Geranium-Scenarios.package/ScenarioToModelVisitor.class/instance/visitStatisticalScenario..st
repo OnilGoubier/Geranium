@@ -16,6 +16,7 @@ visitStatisticalScenario: aStatisticalScenario
 	trendsProfile := aStatisticalScenario resolveTrendsProfile.
 	weightsProfile := aStatisticalScenario resolveWeightsProfile.
 	awarenessTelephoneCostProfile := aStatisticalScenario resolveAwarenessTelephoneProfile.
+	awarenessConcertationCostProfile := aStatisticalScenario resolveAwarenessConcertationProfile.
 	years := aStatisticalScenario years next.
 	
 	buildings := OrderedCollection new.
@@ -102,7 +103,7 @@ visitStatisticalScenario: aStatisticalScenario
 	areaOfInterest prefecture country weightsProfile: weightsProfile deepCopy.
 	self associate: weightsProfile with: (self visitNode: weightsProfile).
 	self associate: aStatisticalScenario with: areaOfInterest.
-	self awarenessByPhone: (self visitAwarenessTelephoneCostProfile: awarenessTelephoneCostProfile).
-	self awarenessByPhone convertResidences.
+	"self awarenessByPhone: (self visitAwarenessTelephoneCostProfile: awarenessTelephoneCostProfile).
+	self awarenessByPhone convertResidences."
 	
 	^ areaOfInterest

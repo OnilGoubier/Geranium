@@ -10,6 +10,7 @@
 		"weightsProfile",
 		"residences",
 		"awarenessTelephoneCostProfile",
+		"awarenessConcertationCostProfile",
 		"buildings",
 		"scenarioToModelDict",
 		"modelToScenarioDict",
@@ -20,7 +21,8 @@
 		"climate",
 		"numberOfDeclaredResidences",
 		"numberOfDeclaredPopulation",
-		"awarenessByPhone"
+		"awarenessByPhone",
+		"awarenessByConcertation"
 	],
 	"name" : "ScenarioToModelVisitor",
 	"commentStamp" : "",

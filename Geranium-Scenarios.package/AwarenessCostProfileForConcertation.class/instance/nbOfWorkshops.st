@@ -1,4 +1,0 @@
-accessing
-nbOfWorkshops
-
-	^ nbOfWorkshops 
