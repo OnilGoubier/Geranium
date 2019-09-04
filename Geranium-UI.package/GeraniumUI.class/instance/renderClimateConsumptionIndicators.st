@@ -10,7 +10,7 @@ renderClimateConsumptionIndicators
 				consumptionLabel do: [ :e | mapView view removeElement: e ].
 				currentConsumptionLabel do: [ :e | mapView view removeElement: e  ] ].
 	consumption := (self consumptionHistoryCumSumAt: step + 1) first/1000
-		printShowingDecimalPlaces: 1.	"The total"
+		printShowingDecimalPlaces: 1.	consumption asString logCr."The total"
 	temperature := (self temperatureAt: step + 1)
 		printShowingDecimalPlaces: 1.
 	humidity := (self humidityAt: step + 1) printShowingDecimalPlaces: 1.

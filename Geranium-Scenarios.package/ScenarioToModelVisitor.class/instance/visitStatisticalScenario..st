@@ -103,7 +103,9 @@ visitStatisticalScenario: aStatisticalScenario
 	areaOfInterest prefecture country weightsProfile: weightsProfile deepCopy.
 	self associate: weightsProfile with: (self visitNode: weightsProfile).
 	self associate: aStatisticalScenario with: areaOfInterest.
-	"self awarenessByPhone: (self visitAwarenessTelephoneCostProfile: awarenessTelephoneCostProfile).
-	self awarenessByPhone convertResidences."
+	self awarenessByPhone: (self visitAwarenessCostProfile: awarenessTelephoneCostProfile ofClass: AwarenessPhoneCall).
+	self awarenessByPhone convertResidences.
+	self awarenessByConcertation: (self visitAwarenessCostProfile: awarenessConcertationCostProfile ofClass: AwarenessConcertation).
+	self awarenessByConcertation convertResidences.
 	
 	^ areaOfInterest

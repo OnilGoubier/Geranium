@@ -18,6 +18,7 @@ geraniumStakeholderMeeting
 		trendsProfile: #RegionalConsumptionTrends;
 		weightsProfile: #ExceedingDPEHypothesis;
 		awarenessTelephoneCostProfile: #AwarenessByPhoneCostEstimation;
+		awarenessConcertationCostProfile: #AwarenessByConcertationCostEstimation;
 		seed: 23424080;
 		years: 1.		
 		
@@ -152,5 +153,23 @@ geraniumStakeholderMeeting
 		named: #AwarenessByPhoneCostEstimation;
 		costPerResidence: (11.0 ~ 2); "in € per residence"
 		duration: [ 1 -> 3 ]; "duration in months"
-		nbOfTimes: 3 "number of time to call a residence".
+		nbOfTimes: 0 "number of time to call a residence".
+		
+	AwarenessConcertationCostProfile new "Cost to improve people awareness using workshops, meetings, coferences, ..."
+		named: #AwarenessByConcertationCostEstimation;
+		duration: [ 24 -> 36 ]; "duration in months"
+		nbOfTimes: 0; "number of concertations"
+		averageCostOfMeetings: (150.0 ~ 25.0);
+		nbOfMeetings: [1 -> 2];
+		averageCostOfCouncilMeetings: (225.0 ~ 25.0);
+		nbOfCouncilMeetings: [1 -> 2];
+		averageCostOfForums: (300.0 ~ 30.00);
+		nbOfForums: [ 1 -> 3 ];
+		averageCostOfStudies: (150.0 ~ 25);
+		nbOfStudies: [ 1 -> 2 ];
+		averageCostOfSurveys: (150.0 ~ 15);
+		nbOfSurveys: [ 2 -> 3 ];
+		averageCostOfWorkshops: (300 ~ 30);
+		nbOfWorkshops: [6 -> 10];
+		contractCost: (150.0 ~ 25).
 	
