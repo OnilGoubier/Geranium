@@ -1,5 +1,5 @@
 as yet unclassified
-fullGeraniumTestScript
+fullGeraniumTestScriptSaved05Sept1
 
 	StatisticalScenario new 
 		named: #GeraniumTest;
@@ -44,9 +44,9 @@ fullGeraniumTestScript
 		numberOfChildren: [1 -> 4]; 
 		income: [(1150.0*12) -> (4000.0*12)];
 		"awareness: {ConsumptionAware . ConsumptionUnaware} % {31.25 . 68.75};"
-		transportMode: {Bicycle . Car . OnFoot } % { 14 . 71 . 15}; "public transport, other, onfoot are put together on OnFoot"
-		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % { 47 . 13 . 40 };
-		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware . PeakOffPeakHoursDoNotKnow } % { 30 . 45 . 25};
+		transportMode: {OnFoot . Bicycle . Car} % { 15 . 14 . 71}; "public transport, other, onfoot are put together on OnFoot"
+		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % { 23 . 24 . 53 };
+		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware } % { 31 . 69 };
 		ownership: false % 100.
 		
 	UrbanProfileForAppartment new 
@@ -57,9 +57,9 @@ fullGeraniumTestScript
 		numberOfChildren: [1 -> 3]; 
 		income: [(1150.0*12) -> (3000.0*12)];
 		"awareness: {ConsumptionAware . ConsumptionUnaware} % {31.58 . 68.42};"
-		transportMode: {Bicycle . Car . OnFoot} % {14 . 71 . 15 };
-		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % { 47 . 12 . 41 };
-		peakOffPeakHours: { PeakOffPeakHoursAware . PeakOffPeakHoursUnaware . PeakOffPeakHoursDoNotKnow} % { 30 . 45 . 25};
+		transportMode: {OnFoot . Bicycle . Car } % {15 . 14 . 71};
+		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % { 23 . 24 . 53 };
+		peakOffPeakHours: { PeakOffPeakHoursAware . PeakOffPeakHoursUnaware } % { 31 . 69 };
 		ownership: false % 100.
 		
 	UrbanProfileForHouse new 
@@ -71,9 +71,9 @@ fullGeraniumTestScript
 		numberOfChildren: [1 -> 4]; 
 		income: [(1150.0*12) -> (3000.0*12)];
 		"awareness: {ConsumptionAware . ConsumptionUnaware} % {18.18 . 81.82};"
-		transportMode: {Bicycle . Car . OnFoot } % { 11 . 74 . 15 };
-		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % { 42 . 12 . 46 };
-		peakOffPeakHours: { PeakOffPeakHoursAware . PeakOffPeakHoursUnaware . PeakOffPeakHoursDoNotKnow} % { 28 . 44 . 28};
+		transportMode: {OnFoot . Bicycle . Car} % { 15 . 11 . 74};
+		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % { 18 . 23 . 59 };
+		peakOffPeakHours: { PeakOffPeakHoursAware . PeakOffPeakHoursUnaware } % { 3 . 7 };
 		ownership: false % 100.
 	
 	UrbanProfileForHouse new 
@@ -81,13 +81,13 @@ fullGeraniumTestScript
 		category: {DPED . DPEE} % {60.0 . 40.0};
 		surface: [60.0 -> 87.0];
 		exposure: (4.2 ~ 0.5) | [4 -> 5]; 
-		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {44.44 . 0.0 . 31.0 . 24.56}; 
+		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {44.44. 0.0 . 31.0 . 24.56}; 
 		numberOfChildren: [1 -> 2]; 
 		income: [(1150.0*12) -> (3000.0*12)];
 		"awareness: {ConsumptionAware . ConsumptionUnaware} % {33.33 . 66.67};"
-		transportMode: {Bicycle . Car . OnFoot } % {14 . 71 . 15};
-		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % {48 . 12 . 40  };
-		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware  . PeakOffPeakHoursDoNotKnow} % { 31 . 44 . 26};
+		transportMode: {OnFoot . Bicycle . Car} % {16 . 14 . 70};
+		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % {24 . 24 . 52  };
+		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware  } % { 31 . 69 };
 		ownership: true % 100.
 	
 	UrbanProfileForHouse new 
@@ -99,9 +99,9 @@ fullGeraniumTestScript
 		numberOfChildren: [1 -> 2]; 
 		income: [(1150.0*12) -> (4000.0*12)];
 		"awareness: {ConsumptionAware . ConsumptionUnaware} % {68.75 . 31.25};"
-		transportMode: {Bicycle . Car . OnFoot} % {21 . 63 . 16};
-		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice } % { 62 . 12 . 25 };
-		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware . PeakOffPeakHoursDoNotKnow} % {35 . 50 . 15};
+		transportMode: {OnFoot . Bicycle . Car} % {16 . 21 . 63};
+		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice } % { 38 . 26 . 36 };
+		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware  } % {36 . 64  };
 		ownership: true % 100.	
 	
 	ClimateProfile new "4 Season"

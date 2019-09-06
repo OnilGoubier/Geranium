@@ -2,7 +2,7 @@ as yet unclassified
 residenceProfileExample: aSymbol
 
 "
-TestScenariosExamples new residenceProfileExample: #HLMRenovated
+TestScenariosExamples new residenceProfileExample: #PrivateHousing
 "
 
 	self fullGeraniumTestScript.

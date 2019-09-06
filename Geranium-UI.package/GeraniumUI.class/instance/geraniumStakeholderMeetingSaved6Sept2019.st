@@ -1,8 +1,8 @@
-as yet unclassified
-fullGeraniumTestScript
+scripts
+geraniumStakeholderMeetingSaved6Sept2019
 
 	StatisticalScenario new 
-		named: #GeraniumTest;
+		named: #Geranium;
 		coordinates: (46.16352961038194 @ -1.1302614212036133) 
 		-> (46.166851083597415 @ -1.1267745494842527);
 		totalNumberOfBuildings: 56; 
@@ -13,7 +13,7 @@ fullGeraniumTestScript
 			#HLMHousing.
 			#SocialHousing.
 			#PrivateHousing
-		} nb: { 108 . 48 . 13 . 11 . 19 }); 
+		} nb: { 108 . 48 . 13 . 11 . 19 });
 		climateProfile: #LaRochelleAverage;
 		trendsProfile: #RegionalConsumptionTrends;
 		weightsProfile: #ExceedingDPEHypothesis;
@@ -44,9 +44,9 @@ fullGeraniumTestScript
 		numberOfChildren: [1 -> 4]; 
 		income: [(1150.0*12) -> (4000.0*12)];
 		"awareness: {ConsumptionAware . ConsumptionUnaware} % {31.25 . 68.75};"
-		transportMode: {Bicycle . Car . OnFoot } % { 14 . 71 . 15}; "public transport, other, onfoot are put together on OnFoot"
-		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % { 47 . 13 . 40 };
-		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware . PeakOffPeakHoursDoNotKnow } % { 30 . 45 . 25};
+		transportMode: {OnFoot . PublicTransport . Bicycle . Car . Other } % { 5 . 5 . 14 . 71 . 5 };
+		consumptionChoice: {AlwaysEnvFriendly . SometimesEnvFriendly . NeverEnvFriendly } % { 23 . 24 . 53 };
+		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware } % { 31 . 69 };
 		ownership: false % 100.
 		
 	UrbanProfileForAppartment new 
@@ -57,9 +57,9 @@ fullGeraniumTestScript
 		numberOfChildren: [1 -> 3]; 
 		income: [(1150.0*12) -> (3000.0*12)];
 		"awareness: {ConsumptionAware . ConsumptionUnaware} % {31.58 . 68.42};"
-		transportMode: {Bicycle . Car . OnFoot} % {14 . 71 . 15 };
-		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % { 47 . 12 . 41 };
-		peakOffPeakHours: { PeakOffPeakHoursAware . PeakOffPeakHoursUnaware . PeakOffPeakHoursDoNotKnow} % { 30 . 45 . 25};
+		transportMode: {OnFoot . PublicTransport . Bicycle . Car . Other  } % {5 . 5 . 14 . 71 . 5 };
+		consumptionChoice: {AlwaysEnvFriendly . SometimesEnvFriendly . NeverEnvFriendly  } % { 23 . 24 . 53 };
+		peakOffPeakHours: { PeakOffPeakHoursAware . PeakOffPeakHoursUnaware } % { 31 . 69 };
 		ownership: false % 100.
 		
 	UrbanProfileForHouse new 
@@ -71,9 +71,9 @@ fullGeraniumTestScript
 		numberOfChildren: [1 -> 4]; 
 		income: [(1150.0*12) -> (3000.0*12)];
 		"awareness: {ConsumptionAware . ConsumptionUnaware} % {18.18 . 81.82};"
-		transportMode: {Bicycle . Car . OnFoot } % { 11 . 74 . 15 };
-		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % { 42 . 12 . 46 };
-		peakOffPeakHours: { PeakOffPeakHoursAware . PeakOffPeakHoursUnaware . PeakOffPeakHoursDoNotKnow} % { 28 . 44 . 28};
+		transportMode: {OnFoot . PublicTransport . Bicycle . Car . Other  } % { 6 . 3 . 11 . 74 . 6 };
+		consumptionChoice: {AlwaysEnvFriendly . SometimesEnvFriendly . NeverEnvFriendly  } % { 18 . 23 . 59 };
+		peakOffPeakHours: { PeakOffPeakHoursAware . PeakOffPeakHoursUnaware } % { 3 . 7 };
 		ownership: false % 100.
 	
 	UrbanProfileForHouse new 
@@ -81,13 +81,13 @@ fullGeraniumTestScript
 		category: {DPED . DPEE} % {60.0 . 40.0};
 		surface: [60.0 -> 87.0];
 		exposure: (4.2 ~ 0.5) | [4 -> 5]; 
-		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {44.44 . 0.0 . 31.0 . 24.56}; 
+		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {44.44. 0.0 . 31.0 . 24.56}; 
 		numberOfChildren: [1 -> 2]; 
 		income: [(1150.0*12) -> (3000.0*12)];
 		"awareness: {ConsumptionAware . ConsumptionUnaware} % {33.33 . 66.67};"
-		transportMode: {Bicycle . Car . OnFoot } % {14 . 71 . 15};
-		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice} % {48 . 12 . 40  };
-		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware  . PeakOffPeakHoursDoNotKnow} % { 31 . 44 . 26};
+		transportMode: {OnFoot . PublicTransport . Bicycle . Car . Other  } % {5 . 6 . 14 . 70 . 5  };
+		consumptionChoice: {AlwaysEnvFriendly . SometimesEnvFriendly . NeverEnvFriendly  } % {24 . 24 . 52  };
+		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware  } % { 31 . 69 };
 		ownership: true % 100.
 	
 	UrbanProfileForHouse new 
@@ -99,9 +99,9 @@ fullGeraniumTestScript
 		numberOfChildren: [1 -> 2]; 
 		income: [(1150.0*12) -> (4000.0*12)];
 		"awareness: {ConsumptionAware . ConsumptionUnaware} % {68.75 . 31.25};"
-		transportMode: {Bicycle . Car . OnFoot} % {21 . 63 . 16};
-		consumptionChoice: {EnvironmentFriendly . EmphasizeQuality  . EmphasizePrice } % { 62 . 12 . 25 };
-		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware . PeakOffPeakHoursDoNotKnow} % {35 . 50 . 15};
+		transportMode: {OnFoot . PublicTransport . Bicycle . Car . Other  } % {2 . 12 . 21 . 63 . 2  };
+		consumptionChoice: {AlwaysEnvFriendly . SometimesEnvFriendly . NeverEnvFriendly  } % { 38 . 26 . 36 };
+		peakOffPeakHours: {PeakOffPeakHoursAware . PeakOffPeakHoursUnaware  } % {36 . 64  };
 		ownership: true % 100.	
 	
 	ClimateProfile new "4 Season"
@@ -148,17 +148,17 @@ fullGeraniumTestScript
 		day: [ -0.10 -> 0.10 ];  "10%"
 		hour: [ -0.10 -> 0.10 ]; "10%"
 		season: [ -0.05 -> 0.05 ].	"5%"
-			
+						
 	AwarenessTelephoneCostProfile new "Cost to improve people awareness using phone calls"
 		named: #AwarenessByPhoneCostEstimation;
 		costPerResidence: (11.0 ~ 2); "in € per residence"
 		duration: [ 1 -> 3 ]; "duration in months"
-		nbOfTimes: 4"(5.0 ~ 0.5) | [4 -> 6]".
+		nbOfTimes: 0 "number of time to call a residence".
 		
 	AwarenessConcertationCostProfile new "Cost to improve people awareness using workshops, meetings, coferences, ..."
 		named: #AwarenessByConcertationCostEstimation;
 		duration: [ 24 -> 36 ]; "duration in months"
-		nbOfTimes: 4; "number of concertations"
+		nbOfTimes: 0; "number of concertations"
 		averageCostOfMeetings: (150.0 ~ 25.0);
 		nbOfMeetings: [1 -> 2];
 		averageCostOfCouncilMeetings: (225.0 ~ 25.0);
@@ -172,7 +172,4 @@ fullGeraniumTestScript
 		averageCostOfWorkshops: (300 ~ 30);
 		nbOfWorkshops: [6 -> 10];
 		contractCost: (150.0 ~ 25).
-		
-
-		
 	

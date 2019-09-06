@@ -1,4 +1,4 @@
 accessing
 weight
 	
-	^ 1
+	^ 0.38
