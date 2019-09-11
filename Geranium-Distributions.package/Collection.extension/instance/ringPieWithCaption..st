@@ -3,9 +3,9 @@ ringPieWithCaption: aString
 
 	"{ #a -> 20 . #b -> 70 . #c -> 10 } ringPieWithCaption: 'meh'"
 
-	| b |
+	| b c g |
 	b := RTPieBuilder new.
-	b extent: self vizSize.
+	"b extent: self vizSize."
 	b shape current
 		innerRadius: 70;
 		externalRadius: 100.

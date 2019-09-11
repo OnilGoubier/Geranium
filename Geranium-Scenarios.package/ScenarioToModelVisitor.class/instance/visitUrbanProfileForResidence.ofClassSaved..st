@@ -1,16 +1,13 @@
 visiting
-visitUrbanProfileForResidence: aUrbanProfileForResidence ofClass: aResidenceClass
+visitUrbanProfileForResidence: aUrbanProfileForResidence ofClassSaved: aResidenceClass
 
-	|residence category surface exposure occupantClass occupants numberOfChildren income awareness ownership transportMode consumptionChoice peakOffPeakHours|
+	|residence category surface exposure occupantClass occupants numberOfChildren income awareness ownership|
 	
 	residence := aResidenceClass new.
 	category := aUrbanProfileForResidence category.
 	surface := aUrbanProfileForResidence surface.
 	exposure := aUrbanProfileForResidence exposure. "will be nil for appartments and set
 	by the appartmentBlock"
-	transportMode := aUrbanProfileForResidence transportMode.
-	consumptionChoice := aUrbanProfileForResidence consumptionChoice.
-	peakOffPeakHours := aUrbanProfileForResidence peakOffPeakHours.
 	
 	residence
 		category: category next; "might be a distribution .. for all these properties"
@@ -30,10 +27,7 @@ visitUrbanProfileForResidence: aUrbanProfileForResidence ofClass: aResidenceClas
 	occupants
 		income: income next;
 		awareness: awareness next;
-		ownership: ownership next;
-		transportMode: transportMode next;
-		consumptionChoice: consumptionChoice next;
-		peakOffPeakHours: peakOffPeakHours next.
+		ownership: ownership next.
 		
 	numberOfChildren ifNotNil: [ occupants numberOfChildren: numberOfChildren next ].
 	
