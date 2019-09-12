@@ -1,0 +1,4 @@
+accessing
+updatePeakHoursGraph
+
+	peakHoursGraph smoothRefresh.

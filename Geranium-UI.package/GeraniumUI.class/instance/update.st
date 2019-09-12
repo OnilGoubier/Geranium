@@ -9,6 +9,7 @@ update
 	self updateStructuralInputDiagrams.
 	self updateSocialInputDiagrams.
 	self updateMicroClimateInputDiagrams.
+	self updateEnvAwarenessInputDiagrams.
 	self updateTotalStructureOutputDiagrams.
 	self updateSocialMicroClimateOutputDiagrams.
 	self updateMapDiagram.

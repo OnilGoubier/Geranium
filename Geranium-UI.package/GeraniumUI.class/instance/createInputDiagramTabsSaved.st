@@ -1,5 +1,5 @@
 initialization
-createInputDiagramTabs
+createInputDiagramTabsSaved
 	| tab |
 	tab := self newTab.
 	tabmgrInput := self newTabManager.
@@ -14,13 +14,6 @@ createInputDiagramTabs
 	tab presenter: socialInputDiagrams.
 	tab
 		label: 'Social';
-		closeable: false;
-		icon: (self appIcon: #social size: 28 @ 28).
-	tabmgrInput addTab: tab.
-	tab := self newTab.
-	tab presenter: envAwarenessInputDiagrams.
-	tab
-		label: 'Environment-Awareness';
 		closeable: false;
 		icon: (self appIcon: #social size: 28 @ 28).
 	tabmgrInput addTab: tab.

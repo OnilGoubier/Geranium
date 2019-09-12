@@ -3,7 +3,7 @@ pieUsingColor: aColorScheme
 
 	"{ #a -> 20 . #b -> 70 . #c -> 10 } pieUsingColor: 'Set1' "
 
-	 | b c g rm|
+	 | b c g sum percentages |
 	
 	c := RTComposer new.
 	
@@ -13,17 +13,12 @@ pieUsingColor: aColorScheme
 	
 	b := RTPieBuilder new. 
 	b view: c view.
-	b interaction popup.
+	sum := (self collect: [ :a | a value ]) sum.
+	percentages := (self collect: [ :a | a key -> ((a value / sum) * 100) ]) asDictionary.
+	b interaction popup. "this does not work"
 	b objects: self.
 	b slice: [:assoc | assoc value].
-	"b normalizer distinctColor."
-	b labeled: [ :assoc | assoc key ].
-	"b emphasize: self first by: 20. ""could be min and max"
-	"b emphasize: self second by: 20."
+	b labeled: [ :assoc | assoc key asString , ': ' , ((percentages at: assoc key)printShowingDecimalPlaces: 1) , '%' ].
 	b build.
-		rm := RTMetricNormalizer new.
-		rm view: c view;
-		objects: self.
-		rm elements with:(RTColorPalette qualitative colors: rm elements size scheme: aColorScheme ) do:
-			[ :el :cl| el trachelShape color: cl].
+	b color: aColorScheme.
 	c view inspect.

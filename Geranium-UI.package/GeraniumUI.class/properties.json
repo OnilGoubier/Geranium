@@ -37,6 +37,7 @@
 		"reportMutex",
 		"structuralInputDiagrams",
 		"socialInputDiagrams",
+		"envAwarenessInputDiagrams",
 		"microClimateInputDiagrams",
 		"outputDiagramsTotStructure",
 		"outputDiagramsSocialMicroClimate",

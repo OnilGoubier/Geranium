@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "GeraniumReportDiagrams",
+	"category" : "Geranium-UI-IO-Diagrams",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"transportModeGraph",
+		"consumptionChoiceGraph",
+		"peakHoursGraph"
+	],
+	"name" : "GeraniumEnvAwarenessInputDiagrams",
+	"type" : "normal"
+}

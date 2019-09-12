@@ -1,0 +1,6 @@
+accessing
+updateConsumptionChoiceGraph
+
+	consumptionChoiceGraph smoothRefresh.
+
+	
