@@ -22,7 +22,10 @@
 		"numberOfDeclaredResidences",
 		"numberOfDeclaredPopulation",
 		"awarenessByPhone",
-		"awarenessByConcertation"
+		"awarenessByConcertation",
+		"convertedResidencesByPhone",
+		"convertedResidencesByConcertation",
+		"awarenessCampaign"
 	],
 	"name" : "ScenarioToModelVisitor",
 	"commentStamp" : "",

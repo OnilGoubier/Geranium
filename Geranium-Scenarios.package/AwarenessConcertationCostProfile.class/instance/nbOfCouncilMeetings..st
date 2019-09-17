@@ -1,4 +1,4 @@
 accessing
 nbOfCouncilMeetings: anObject
 
-	nbOfCouncilMeetings := anObject
+	nbOfCouncilMeetings := self distributionOf: anObject

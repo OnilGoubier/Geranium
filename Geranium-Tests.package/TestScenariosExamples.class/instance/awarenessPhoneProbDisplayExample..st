@@ -11,9 +11,6 @@ TestScenariosExamples new awarenessPhoneProbDisplayExample: #AwarenessByPhoneCos
 	areaOfInterest := visitor analyze: scenario.
 	profile := Profile retrieve: aSymbol.
 	profile successProbabilities.
-	"profile inspect."
-	visitor awarenessByPhone: (visitor visitAwarenessCostProfile: profile ofClass: AwarenessPhoneCall).
-	"visitor inspect."
 	cR := visitor awarenessByPhone computeSuccessProbabilities: 4.
 	cR inspect.
 	

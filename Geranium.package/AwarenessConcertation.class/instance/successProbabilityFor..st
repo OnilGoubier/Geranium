@@ -17,6 +17,6 @@ successProbabilityFor: aNumber
 				[:i |
 				ptot at: i put: ("self class initialProbability * (2.71828 raisedTo: (0.7069 * i))"
 									  self totalSuccessProbabilityFor: i).
-				p at: i put: ((ptot at: i )- (ptot at: i-1))* ((1+(((self allConvertedResidences)  size )/(( (self residences at: i) size ))asFloat))).
+				p at: i put: (((ptot at: i )- (ptot at: i-1))* ((1+(((self campaignMng allConvertedResidences)  size )/( self residences size )asFloat)))).
 				]].
 	^ p at: aNumber

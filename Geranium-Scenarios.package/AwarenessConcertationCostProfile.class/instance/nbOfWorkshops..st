@@ -1,4 +1,4 @@
 accessing
 nbOfWorkshops: anObject
 
-	nbOfWorkshops  := anObject
+	nbOfWorkshops  := self distributionOf: anObject

@@ -1,4 +1,4 @@
 accessing
 contractCost: anObject
 
-	contractCost  := anObject
+	contractCost  := self distributionOf: anObject

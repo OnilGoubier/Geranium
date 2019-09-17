@@ -1,4 +1,4 @@
 accessing
 nbOfParticipants: anObject
 
-	nbOfParticipants  := anObject
+	nbOfParticipants  := self distributionOf: anObject

@@ -1,4 +1,4 @@
 accessing
 nbOfStudies: anObject
 
-	nbOfStudies  := anObject
+	nbOfStudies  := self distributionOf: anObject

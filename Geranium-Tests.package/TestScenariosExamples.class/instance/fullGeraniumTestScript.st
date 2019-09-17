@@ -151,16 +151,16 @@ fullGeraniumTestScript
 			
 	AwarenessTelephoneCostProfile new "Cost to improve people awareness using phone calls"
 		named: #AwarenessByPhoneCostEstimation;
-		costPerResidence: (11.0 ~ 2); "in € per residence"
+		costPerResidence: 11.0"(11.0 ~ 1)"; "in € per residence"
 		duration: [ 1 -> 3 ]; "duration in months"
-		nbOfTimes: 4"(5.0 ~ 0.5) | [4 -> 6]".
+		nbOfTimes: 5"(5.0 ~ 0.5) | [4 -> 6]".
 		
 	AwarenessConcertationCostProfile new "Cost to improve people awareness using workshops, meetings, coferences, ..."
 		named: #AwarenessByConcertationCostEstimation;
 		duration: [ 24 -> 36 ]; "duration in months"
-		nbOfTimes: 4; "number of concertations"
+		nbOfTimes: 5; "number of concertations"
 		averageCostOfMeetings: (150.0 ~ 25.0);
-		nbOfMeetings: [1 -> 2];
+		nbOfMeetings: 2"[1 -> 2]";
 		averageCostOfCouncilMeetings: (225.0 ~ 25.0);
 		nbOfCouncilMeetings: [1 -> 2];
 		averageCostOfForums: (300.0 ~ 30.00);
@@ -171,6 +171,7 @@ fullGeraniumTestScript
 		nbOfSurveys: [ 2 -> 3 ];
 		averageCostOfWorkshops: (300 ~ 30);
 		nbOfWorkshops: [6 -> 10];
+		nbOfParticipants: [40 -> 60];
 		contractCost: (150.0 ~ 25).
 		
 

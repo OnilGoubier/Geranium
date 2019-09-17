@@ -1,4 +1,3 @@
 accessing
 costPerResidence: anObject
-
-	costPerResidence := anObject
+	costPerResidence := anObject 

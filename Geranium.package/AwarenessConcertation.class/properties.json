@@ -6,7 +6,23 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"totalSuccessProbabilities"
+		"totalSuccessProbabilities",
+		"averageCostOfCouncilMeetings",
+		"averageCostOfWorkshops",
+		"averageCostOfMeetings",
+		"averageCostOfForums",
+		"averageCostOfSurveys",
+		"averageCostOfStudies",
+		"nbOfWorkshops",
+		"nbOfMeetings",
+		"nbOfCouncilMeetings",
+		"nbOfForums",
+		"nbOfSurveys",
+		"nbOfStudies",
+		"nbOfParticipants",
+		"contractCost",
+		"qNumber",
+		"campaignMng"
 	],
 	"name" : "AwarenessConcertation",
 	"type" : "normal"

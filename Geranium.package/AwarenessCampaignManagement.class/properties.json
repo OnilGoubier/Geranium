@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "AwarenessCampaign",
+	"category" : "Geranium",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"awarenessPhoneCalls",
+		"awarenessConcertations",
+		"awarenessPhoneCallCost",
+		"awarenessConcertationCost",
+		"nbOfCampaignDone"
+	],
+	"name" : "AwarenessCampaignManagement",
+	"type" : "normal"
+}

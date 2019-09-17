@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"costPerResidence",
 		"duration"
 	],
 	"name" : "CostProfile",

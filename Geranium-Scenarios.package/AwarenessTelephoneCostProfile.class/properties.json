@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"costPerResidence"
+	],
 	"name" : "AwarenessTelephoneCostProfile",
 	"type" : "normal"
 }

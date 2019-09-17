@@ -11,9 +11,6 @@ TestScenariosExamples new awarenessConcertationProbDisplayExample: #AwarenessByC
 	areaOfInterest := visitor analyze: scenario.
 	profile := Profile retrieve: aSymbol.
 	profile successProbabilities.
-	"profile inspect."
-	visitor awarenessByConcertation: (visitor visitAwarenessCostProfile: profile ofClass: AwarenessConcertation ).
-	"visitor inspect."
 	cR := visitor awarenessByConcertation computeSuccessProbabilities: 4.
 	cR inspect.
 	

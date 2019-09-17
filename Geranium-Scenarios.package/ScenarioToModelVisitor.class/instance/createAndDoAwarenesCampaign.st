@@ -1,0 +1,5 @@
+initialization
+createAndDoAwarenesCampaign
+
+	self createAwarenessCampaign.
+	awarenessCampaign convertResidencesCampaign.

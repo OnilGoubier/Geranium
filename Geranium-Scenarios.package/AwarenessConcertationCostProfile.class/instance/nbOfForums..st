@@ -1,4 +1,4 @@
 accessing
 nbOfForums: anObject
 
-	nbOfForums  := anObject
+	nbOfForums  := self distributionOf: anObject
