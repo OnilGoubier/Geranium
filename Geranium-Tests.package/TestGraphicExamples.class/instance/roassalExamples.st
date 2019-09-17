@@ -16,6 +16,7 @@ data := #(20 30 50 100).
 	g extent: 200 @ 200.
 	g view: c view.
 	ds := RTData new.
+	ds label: 'test'. "this does not work"
 	ds interaction popup.
 	ds barShape color: Color blue.
 	ds points: data.
