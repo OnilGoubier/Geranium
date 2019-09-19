@@ -153,12 +153,12 @@ geraniumStakeholderMeeting
 		named: #AwarenessByPhoneCostEstimation;
 		costPerResidence: (11.0 ~ 2); "in € per residence"
 		duration: [ 1 -> 3 ]; "duration in months"
-		nbOfTimes: 0 "number of time to call a residence".
+		nbOfTimes: 4 "number of time to call a residence".
 		
 	AwarenessConcertationCostProfile new "Cost to improve people awareness using workshops, meetings, coferences, ..."
 		named: #AwarenessByConcertationCostEstimation;
 		duration: [ 24 -> 36 ]; "duration in months"
-		nbOfTimes: 0; "number of concertations"
+		nbOfTimes: 4; "number of concertations"
 		averageCostOfMeetings: (150.0 ~ 25.0);
 		nbOfMeetings: [1 -> 2];
 		averageCostOfCouncilMeetings: (225.0 ~ 25.0);
@@ -171,5 +171,6 @@ geraniumStakeholderMeeting
 		nbOfSurveys: [ 2 -> 3 ];
 		averageCostOfWorkshops: (300 ~ 30);
 		nbOfWorkshops: [6 -> 10];
+		nbOfParticipants: [40 -> 60];
 		contractCost: (150.0 ~ 25).
 	

@@ -10,7 +10,8 @@
 		"awarenessConcertations",
 		"awarenessPhoneCallCost",
 		"awarenessConcertationCost",
-		"nbOfCampaignDone"
+		"nbOfCampaignDone",
+		"totalProbabilityByPhone"
 	],
 	"name" : "AwarenessCampaignManagement",
 	"type" : "normal"

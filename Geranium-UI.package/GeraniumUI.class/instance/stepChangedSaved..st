@@ -1,12 +1,11 @@
 events
-stepChanged: aStep
+stepChangedSaved: aStep
 
 	self stepMutex critical: [ 
 		step := aStep.
 		slider widget label: self sliderLabel. "fix for max" 
 		outputDiagramsTotStructure update: step. 
-		"outputDiagramsSocialMicroClimate update: step. "
-		"outputDiagramsAwarenesscampaign update."
+		outputDiagramsSocialMicroClimate update: step. 
 		self renderClimateConsumptionIndicators.
 		aStep = stepMax ifTrue: [ self pauseTemperatureAnimation  ]
 	]

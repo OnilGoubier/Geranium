@@ -1,5 +1,5 @@
 *Geranium-Distributions
-connectedMultipleDottedPlots: someColors withLabels: someStrings withXYLabels: strings
+connectedMultipleDottedPlots: someColors withLabels: someStrings withXYLabels: strings inView: aView
 
 	| b ds |
 	
@@ -7,7 +7,7 @@ connectedMultipleDottedPlots: someColors withLabels: someStrings withXYLabels: s
 		connectedMultipleDottedPlots: { Color red . Color blue} withLabels: {'first' . 'second' } withXYLabels: {'hallo' . 'hi'}] value"
 	
 	b := RTGrapher new.
-	"aView ifNotNil: [ b view: aView ]."
+	aView ifNotNil: [ b view: aView ].
 	b extent: self vizSize.
 	
 	1 to: self size do:
@@ -16,14 +16,9 @@ connectedMultipleDottedPlots: someColors withLabels: someStrings withXYLabels: s
 		ds label: (someStrings at: i).
 		ds dotShape color: (someColors at: i).
 		ds connectColor: (someColors at: i).
-		ds points: (self at: i).
+		ds points: (self at: i).		
 		b add: ds.].
-	
-		
-		
-	"self size > 1 ifTrue: [
-		b addDecorator: RTMeanDevVarDecorator new moveInFront
-	]."
+
 	strings ifNotNil: [b	axisY title: (strings at: 1); noDecimal.
 								b axisX title: (strings at: 2); noDecimal.].
 	b legend.

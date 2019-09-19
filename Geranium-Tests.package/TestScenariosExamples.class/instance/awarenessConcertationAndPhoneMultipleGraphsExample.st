@@ -9,7 +9,7 @@ TestScenariosExamples new awarenessConcertationAndPhoneMultipleGraphsExample
 	scenario := Scenario retrieve: #GeraniumTest.
 	visitor := ScenarioToModelVisitor new.
 	areaOfInterest := visitor analyze: scenario.
-	initRSize := visitor residences size.
+	initRSize := (visitor awarenessCampaign residences at: 1) size.
 	
 	awc := visitor awarenessCampaign.
 	cR := awc awarenessConcertations.
@@ -25,7 +25,7 @@ cR isEmpty
 	ifTrue: [ myPoints add: 0 ]
 	ifFalse: 
 		[cR do: [ :each | tc :=(each convertedResidences size + tc).
-		 myPoints add: (tc / initRSize) asFloat * 100]].
+		 myPoints add: ((tc / initRSize) asFloat * 100 round: 1)]].
 
 myPoints1 := OrderedCollection new.
 cR1 isEmpty 
@@ -33,7 +33,7 @@ cR1 isEmpty
 	ifFalse: 
 		[
 		cR1 do: [ :each | tc1 :=(each convertedResidences size + tc1).
-		 myPoints1 add: (tc1 / initRSize) asFloat * 100 ]].
+		 myPoints1 add: ((tc1 / initRSize) asFloat * 100 round: 1) ]].
 
 mpoints := { myPoints . myPoints1 }.
 [mpoints connectedMultipleDottedPlots: { Color green . Color blue } 

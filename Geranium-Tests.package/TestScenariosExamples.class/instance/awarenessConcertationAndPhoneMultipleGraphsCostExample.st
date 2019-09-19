@@ -23,14 +23,14 @@ cR isEmpty
 	ifTrue: [ myPoints add: 0 ]
 	ifFalse: 
 		[cR do: [ :each | tc :=each + tc.
-		 myPoints add: tc ]].
+		 myPoints add: (tc round: 1)]].
 
 myPoints1 := OrderedCollection new.
 cR1 isEmpty 
 	ifTrue: [ myPoints1 add: 0 ]
 	ifFalse:
 		[cR1 do: [ :each | tc1 :=each  + tc1.
-		 myPoints1 add: tc1 ]].
+		 myPoints1 add: (tc1 round:1)]].
 
 mpoints := { myPoints . myPoints1 }.
 [mpoints connectedMultipleDottedPlots: { Color purple . Color orange  } 

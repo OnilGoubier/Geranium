@@ -1,5 +1,5 @@
 initialization
-createOutputDiagramTabs
+createOutputDiagramTabsSaved
 	| tab |
 	tabmgrOutput := self newTabManager.
 	tab := self newTab.
@@ -10,9 +10,9 @@ createOutputDiagramTabs
 		icon: (self appIcon: #'energy-lamp' size: 30 @ 30).
 	tabmgrOutput addTab: tab.
 	tab := self newTab.
-	tab presenter: outputDiagramsAwarenesscampaign.
+	tab presenter: outputDiagramsSocialMicroClimate.
 	tab
-		label: 'Awareness Campaign';
+		label: 'Social/Climate';
 		closeable: false;
-		icon: (self appIcon: #'social' size: 30 @ 30).
+		icon: (self appIcon: #'energy-thunder' size: 30 @ 30).
 	tabmgrOutput addTab: tab

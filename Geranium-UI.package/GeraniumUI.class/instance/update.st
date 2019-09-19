@@ -11,5 +11,6 @@ update
 	self updateMicroClimateInputDiagrams.
 	self updateEnvAwarenessInputDiagrams.
 	self updateTotalStructureOutputDiagrams.
-	self updateSocialMicroClimateOutputDiagrams.
+	"self updateSocialMicroClimateOutputDiagrams."
+	self updateAwarenessCampaignOutputDiagrams.
 	self updateMapDiagram.

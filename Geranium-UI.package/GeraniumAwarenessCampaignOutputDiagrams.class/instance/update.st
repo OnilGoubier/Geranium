@@ -1,0 +1,5 @@
+initialization
+update
+
+	successProbabilitiesPlot smoothRefresh.
+	awarenessCampaignCostPlot smoothRefresh

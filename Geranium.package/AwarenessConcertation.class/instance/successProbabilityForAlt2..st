@@ -1,10 +1,10 @@
 computing
-successProbabilityFor: aNumber
+successProbabilityForAlt2: aNumber
 
 "
 With conditionnal probability, taking into account if awareness by phone campaign has been done
 "
-	|p ptot |
+	|p ptot|
 	
 	aNumber < 0 
 		ifTrue: [ ^ self ].
@@ -13,10 +13,9 @@ With conditionnal probability, taking into account if awareness by phone campaig
 	((aNumber > 3) or: (aNumber =0) )
 		ifTrue: [ ^ 0 ]
 		ifFalse:
-			[ptot at: 1 put: ("self class initialProbability * (2.71828 raisedTo: (0.7069 * 1))"
+			[p at: 1 put: ("self class initialProbability * (2.71828 raisedTo: (0.7069 * 1))"
 								self totalSuccessProbabilityFor: 1).
-			 p at: 1 put: ((ptot at: 1) - self campaignMng totalProbabilityByPhone) *  
-								((1+(((self campaignMng allConvertedResidences)  size )/( self residences size )asFloat))).	
+			 ptot at: 1 put: (p at: 1).	
 			2 to: aNumber do:
 				[:i |
 				ptot at: i put: ("self class initialProbability * (2.71828 raisedTo: (0.7069 * i))"

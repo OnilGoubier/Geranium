@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "GeraniumReportDiagrams",
+	"category" : "Geranium-UI-IO-Diagrams",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"successProbabilitiesPlot",
+		"awarenessCampaignCostPlot"
+	],
+	"name" : "GeraniumAwarenessCampaignOutputDiagrams",
+	"type" : "normal"
+}
