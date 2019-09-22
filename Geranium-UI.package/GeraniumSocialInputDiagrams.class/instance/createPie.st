@@ -1,12 +1,12 @@
 initialization
 createPie
-	| stats |
+	| stats processed|
 	"stats := (report inputVisitor residences collect: [ :r |  r occupants class ]) frequencies associations."
 	
 	pie := RoassalModel new.
 	pie
 		script: [ :v :c | | b |
-			self processCanvas: c and: v. 
+			processed ifNil: [processed := true. self processCanvas: c and: v]. 
 			stats := (report inputVisitor residences collect: [ :r |  r occupants class ]) frequencies associations.
 			b := stats pieWithCaption: nil inView: v.
 			"color setting does not seem to work"

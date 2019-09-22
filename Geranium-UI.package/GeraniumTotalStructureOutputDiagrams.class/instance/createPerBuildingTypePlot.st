@@ -1,9 +1,9 @@
 initialization
 createPerBuildingTypePlot
-	| b processed |
+	| b "processed" |
 	buildingTypePlot := RoassalModel new.
 	buildingTypePlot script: [ :v :c | 
-		[processed ifNil: [processed := true. self processCanvas: c and: v].
+		["processed ifNil: [processed := true. self processCanvas: c and: v]."
 		b := ((self consumptionHistoryCumSumAt: step + 1) removeFirst; yourself)/1000
 						asHistogramDifferentColors: self typesColors
 						withCaption: nil

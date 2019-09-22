@@ -1,12 +1,12 @@
 as yet unclassified
 createTransportModeGraph
 
-	|stats |
+	|stats processed|
 
 	transportModeGraph  := RoassalModel new.
 	transportModeGraph
 		script: [ :v :c | | b |
-			self processCanvas: c and: v. 
+			processed ifNil: [processed := true. self processCanvas: c and: v]. 
 			stats := (report inputVisitor residences collect: [ :r |  r occupants transportMode ]) frequencies associations.
 			b := stats pieUsingColor: 'Set2' inView: v.
 			"color setting does not seem to work"

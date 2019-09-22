@@ -1,12 +1,12 @@
 accessing
 createPeakHoursGraph
 
-	|stats |
+	|stats processed |
 
 	peakHoursGraph  := RoassalModel new.
 	peakHoursGraph
 		script: [ :v :c | | b |
-			self processCanvas: c and: v. 
+			processed ifNil: [processed := true. self processCanvas: c and: v]. 
 			stats := (report inputVisitor residences collect: [ :r |  r occupants peakOffPeakHours  ]) frequencies associations.
 			b := stats pieUsingColor: 'Set3' inView: v.
 			"color setting does not seem to work"

@@ -1,17 +1,12 @@
 initialization
 createAwarenessCampaignCostPlot
 
-	| spPoints awPhone awConcertation awCampaign awpPoints awcPoints totalCostPhone totalCostConcertation totalResidences processed |
-	
-	"awCampaign  := report inputVisitor awarenessCampaign.
-	awPhone := awCampaign awarenessPhoneCallCost.
-	awConcertation := awCampaign awarenessConcertationCost.
-	totalResidences := report inputVisitor residences size."
+	| spPoints awPhone awConcertation awCampaign awpPoints awcPoints totalCostPhone totalCostConcertation totalResidences "processed "|
 	
 	awarenessCampaignCostPlot := RoassalModel new.
 	awarenessCampaignCostPlot 
 		script: [ :v :c | |b |
-			processed ifNil: [processed := true. self processCanvas: c and: v].
+			"processed ifNil: [processed := true. self processCanvas: c and: v]."
 			awCampaign  := report inputVisitor awarenessCampaign.
 			awPhone := awCampaign awarenessPhoneCallCost.
 			awConcertation := awCampaign awarenessConcertationCost.
@@ -38,9 +33,10 @@ createAwarenessCampaignCostPlot
 				spPoints := { awcPoints . awpPoints  }.
 				b := spPoints connectedMultipleDottedPlots: { Color purple . Color orange } 
 						withLabels: { 'Concertation' . 'Phone' }
-						withXYLabels: {'Cost' . 'Nb Of Times' }
+						withXYLabels: {'Cost €' . 'Nb Of Times' }
 						inView: v.
 			b build.
 			v canvas camera "focusOnCenterScaled."focusOnCenterScaled: v canvas extent * self cameraScale.
-			"v @ (RTGridView new gridSize: 10)."
+			v @ RTZoomableView.
+			v @ RTDraggableView.
 			v]

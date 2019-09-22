@@ -1,17 +1,12 @@
 initialization
 createSuccessProbabilitiesPlot
 
-	| spPoints awPhone awConcertation awCampaign awpPoints awcPoints totalConvertedPhone totalConvertedConcertation totalResidences processed |
-	
-	"awCampaign  := report inputVisitor awarenessCampaign.
-	awPhone := awCampaign awarenessPhoneCalls.
-	awConcertation := awCampaign awarenessConcertations.
-	totalResidences := report inputVisitor residences size."
+	| spPoints awPhone awConcertation awCampaign awpPoints awcPoints totalConvertedPhone totalConvertedConcertation totalResidences "processed" |
 	
 	successProbabilitiesPlot := RoassalModel new.
 	successProbabilitiesPlot 
 		script: [ :v :c | |b |
-			processed ifNil: [processed := true. self processCanvas: c and: v].
+			"processed ifNil: [processed := true. self processCanvas: c and: v]."
 			awCampaign  := report inputVisitor awarenessCampaign.
 			awPhone := awCampaign awarenessPhoneCalls.
 			awConcertation := awCampaign awarenessConcertations.
@@ -44,5 +39,6 @@ createSuccessProbabilitiesPlot
 						inView: v.
 			b build.
 			v canvas camera "focusOnCenterScaled."focusOnCenterScaled: v canvas extent * self cameraScale.
-			"v @ (RTGridView new gridSize: 10)."
+			v @ RTZoomableView.
+			v @ RTDraggableView.
 			v]

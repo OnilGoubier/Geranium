@@ -2,11 +2,11 @@ initialization
 createIndividualConsumptionPlot
 
 	
-	| b processed lb |
+	| b "processed" lb |
 	individualConsumption  := RoassalModel new.
 	individualConsumption script: [ :v :c | 
 		| historyUpTillNow individualHistoryUpTillNow deviationDataPoints showMin showMax surfaceDict oSizeDict | 
-		processed ifNil: [processed := true. self processCanvas: c and: v].
+		"processed ifNil: [processed := true. self processCanvas: c and: v]."
 		showMin := step < 24
 		ifTrue: [ 1 ]
 		ifFalse: [ step // 24 * 24 ].

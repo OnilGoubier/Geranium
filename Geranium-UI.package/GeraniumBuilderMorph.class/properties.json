@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "TEasilyThemed classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GeraniumBuilderMorph",
+	"commentStamp" : "",
+	"super" : "MorphicModel",
+	"traitcomposition" : "TEasilyThemed",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Geranium-UI"
+}
