@@ -8,6 +8,7 @@ testStats
 ((5 ~ 2) | [ 0 -> 10 ]) identityHistogram.
 ((5 ~ 2.0) | [ 0 -> 10 ]) plot.
 ((5 ~ 2.0) | [ 0 -> 10 ]) histogram.
+((13.25 ~ 1.5) | [0 -> 32]) plot.
 (5.0 ~ 2) plot.
 (5.0 ~ 2) histogram.
 (5 ~ 2) plot.
