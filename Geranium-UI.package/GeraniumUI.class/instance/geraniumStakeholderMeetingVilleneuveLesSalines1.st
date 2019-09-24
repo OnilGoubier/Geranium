@@ -1,5 +1,5 @@
 scripts
-geraniumStakeholderMeeting
+geraniumStakeholderMeetingVilleneuveLesSalines1
 
 	StatisticalScenario new 
 		named: #Geranium;
