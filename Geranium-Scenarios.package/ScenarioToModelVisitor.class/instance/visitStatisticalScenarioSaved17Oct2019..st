@@ -1,7 +1,7 @@
 visiting
-visitStatisticalScenario: aStatisticalScenario
+visitStatisticalScenarioSaved17Oct2019: aStatisticalScenario
 
-	|totalResidences totalPopulation totalNumberOfDeclaredResidences aNumber nbCreatedResidencesPerCategory nbCreatedBuildingsPerCategory buildingsOrg |
+	|totalResidences totalPopulation totalNumberOfDeclaredResidences aNumber nbCreatedResidencesPerCategory nbCreatedBuildingsPerCategory buildingsOrg residencesTypes|
 
 	aNumber := 100. " this is to improve precesion of the algorithm, better from DSL?"
 	areaOfInterest := AreaOfInterest new.
@@ -51,7 +51,7 @@ visitStatisticalScenario: aStatisticalScenario
 									building := self visitUrbanProfileForAppartmentBlock: myProfile.
 									building area: areaOfInterest.
 									nbCreatedBuildingsPerCategory at: category, 'Block' ifAbsentPut: 0.
-									nbCreatedBuildingsPerCategory at: category, 'Block' 	put:(nbCreatedBuildingsPerCategory at: category, 'Block')+1.
+									nbCreatedBuildingsPerCategory at: category, 'Block' 											put:(nbCreatedBuildingsPerCategory at: category, 'Block')+1.
 									buildings "double dispatch and traversal logic in the visitor makes sense here"
 									add: building.     ]]																																													
 						ifFalse:
@@ -68,8 +68,28 @@ visitStatisticalScenario: aStatisticalScenario
 				totalPopulation := totalPopulation + residence occupantSize.
 			]]. 	
 	
+	"Todo: make the algorithm independent of the data !!! OG"
+	residencesTypes := (self residences collect: [ :r | ((self modelToScenarioDict at: r) first) name ]).
+	buildingsOrg := OrderedCollection new.
+	(residencesTypes frequencies) keysAndValuesDo: 
+			[ :k :v | | f tb mykey| 
+				f := ((v/aNumber) asFloat rounded).
+				((k = #HLMNew) or: (k = #HLMRenovated)) 
+					ifTrue:
+						[mykey := k ,'Block'.
+						tb :=  buildings select: [:b | "self halt. "
+										(b isKindOf: AppartmentBlock)
+										and: 
+										((self modelToScenarioDict at: b) first name = mykey )]."self halt."
+										buildingsOrg addAll: (tb first: ((v/(12*aNumber)) asFloat rounded))]
+					ifFalse: 
+						[buildingsOrg addAll: 
+							(( buildings select: 
+										[:b | ((b isKindOf: House)
+												and: 
+												(((self modelToScenarioDict at: b) first) name = k))]) first: f)]].
 	
-	buildingsOrg := self computeAllBuildingsFor: aNumber.
+	
 	areaOfInterest buildings: buildingsOrg.
 	self buildings: buildingsOrg. 
 	self residencesUpdate.
