@@ -1,4 +1,7 @@
 file in/out
 openFile
 
-	^ self readFromAFile: self chooseFileToOpen.
+	|dir|
+	dir := self chooseFileToOpen.
+	dir isNotNil ifTrue:
+		[^ self readFromAFile: dir] 
