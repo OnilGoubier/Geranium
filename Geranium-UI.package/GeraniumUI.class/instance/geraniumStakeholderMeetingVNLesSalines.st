@@ -1,10 +1,10 @@
 scripts
-geraniumStakeholderMeeting
+geraniumStakeholderMeetingVNLesSalines
 
 	StatisticalScenario new 
 		named: #Geranium;
-		coordinates: (46.16352961038194 @ -1.1302614212036133) 
-		-> (46.166851083597415 @ -1.1267745494842527);
+		coordinates: (46.151642874414435 @ -1.1259353470286442) 
+		-> (46.15165387916778 @ -1.1251115798950195);
 		totalNumberOfBuildings: 56; 
 		totalNumberOfResidences: 186; 
 		nbResidencesForEachCategory:({  

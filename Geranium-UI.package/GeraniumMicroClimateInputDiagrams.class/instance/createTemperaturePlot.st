@@ -1,11 +1,11 @@
 initialization
 createTemperaturePlot
 	
-	"| processed |"
+	| processed |
 	temperaturePlot := RoassalModel new.
 	temperaturePlot script: [ :v :c | 
 		|b|
-		"processed ifNil: [processed := true. self processCanvas: c and: v]."
+		processed ifNil: [processed := true. self processCanvas: c and: v].
 		b := report input climateProfile dailyTemperaturePlot.
 		b view: v.
 		b axisX
