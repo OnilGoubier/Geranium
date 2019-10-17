@@ -21,6 +21,6 @@ retrieveMapDataDefinedAs: overpassDataTypeAndParamPairsStrings positionedWithInB
 		url: 'http://overpass-api.de/api/interpreter';
 		queryAt: 'data'
 		put: s contents. 
-		self halt.
+		"self halt."
 		z contentReader: [ :entity | NeoJSONReader fromString: entity contents ].
 		^ z get.

@@ -11,9 +11,5 @@ createMap
 				colored: catColorDistribution
 				"geraniumAreaMapExample". 
 			self boundingBox: mapView boundingBox.
-			"self renderTemperatureHumidityDecoration." " we better do this decoration with the real value, we stop it temporarily"
-			"self renderKiviatIn: view. ""should do it only once"
-			"self renderArealLegend.
-			self renderMinMaxConsumption."
 			self renderClimateConsumptionIndicators.		
 			 ] 
