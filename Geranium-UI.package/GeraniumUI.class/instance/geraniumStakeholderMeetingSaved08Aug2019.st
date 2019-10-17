@@ -56,7 +56,7 @@ geraniumStakeholderMeetingSaved08Aug2019
 		named: #HLMHousing;
 		category: DPEA;
 		surface: [47.0 -> 92.0];
-		exposure: "(3 ~ 1) | [0 -> 5];" (4.2 ~ 0.5) | [4->5] ;
+		exposure: "(3 ~ 1) | [0 -> 5];" "(4.2 ~ 0.5) |" [4->5] ;
 		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {18.18. 27.27 . 31.0 . 23.55}; 
 		numberOfChildren: [1 -> 4]; 
 		income: [(1150.0*12) -> (3000.0*12)];
@@ -67,7 +67,7 @@ geraniumStakeholderMeetingSaved08Aug2019
 		named: #SocialHousing;
 		category: {DPED . DPEE} % {60.0 . 40.0};
 		surface: [60.0 -> 87.0];
-		exposure: "(3 ~ 1) | [3 -> 5];" (4.2 ~ 0.5) | [4 -> 5];
+		exposure: "(3 ~ 1) | [3 -> 5];" "(4.2 ~ 0.5) |" [4 -> 5];
 		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {44.44. 0.0 . 31.0 . 24.56}; 
 		numberOfChildren: [1 -> 2]; 
 		income: [(1150.0*12) -> (3000.0*12)];
@@ -78,7 +78,7 @@ geraniumStakeholderMeetingSaved08Aug2019
 		named: #PrivateHousing;
 		category: {DPED . DPEE} % {60.0 . 40.0};
 		surface: [80.0 -> 160.0];
-		exposure: "(3 ~ 1) | [0 -> 5];" (4.5 ~ 0.5) | [4 -> 5];
+		exposure: "(3 ~ 1) | [0 -> 5];" "(4.5 ~ 0.5) | "[4 -> 5];
 		occupantClass: {SingleAdult . Couple . SingleParent . Family} % {18.75. 12.50 . 31.0 . 37.75}; 
 		numberOfChildren: [1 -> 2]; 
 		income: [(1150.0*12) -> (4000.0*12)];

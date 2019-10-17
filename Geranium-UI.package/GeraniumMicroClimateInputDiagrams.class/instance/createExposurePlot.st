@@ -15,7 +15,6 @@ createExposurePlot
 		1 to: 6 do: [ :i | (exposures keys includes: i) ifFalse: [ exposures at: i put: 0 ] ].
 
 		"exposures := (exposures associations sort: [:x :y | x key < y key]) collect: [:a | a value]."
-		"exposures := exposures associations sort: [:x :y | x key < y key]."
 		exposures := exposures associations.
 		b := RTGrapher new view: v.
 		ds := RTData new.
